@@ -23,7 +23,7 @@ const HomePageContents = () => {
         </div>
         <WhatWeOffer />
         <WhyChoseUs />
-        {/* <ContactUs /> */}
+        <ContactUs />
       </motion.div>
     </>
   );
