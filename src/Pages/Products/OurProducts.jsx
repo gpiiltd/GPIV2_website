@@ -1,31 +1,62 @@
 import React from "react";
 import CustomLine from "../../Components/CustomLines/CustomLine";
-import image1 from "../../Components/Assets/image 9.png";
-import image2 from "../../Components/Assets/Group 66.png";
-import image3 from "../../Components/Assets/logo.svg";
-import image4 from "../../Components/Assets/GPI PAS LOGO.png";
+import image1 from "../../Components/Assets/Group 37383.svg";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+// import image2 from "../../Components/Assets/Group 66.png";
+// import image3 from "../../Components/Assets/logo.svg";
+// import image4 from "../../Components/Assets/GPI PAS LOGO.png";
 import { motion } from "framer-motion";
 
 const OurProducts = () => {
+  const products = [
+    {
+      title: "user Management",
+      image: image1,
+      h1: "Lagos ideation innovate",
+      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      productLink: "visit website",
+    },
+    {
+      title: "user Management",
+      image: image1,
+      h1: "Lagos ideation innovate",
+      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      productLink: "visit website",
+    },
+    {
+      title: "user Management",
+      image: image1,
+      h1: "Lagos ideation innovate",
+      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      productLink: "visit website",
+    },
+  ];
+  const slideLeft =() => {
+    let slider = document.getElementById("slider")
+    slider.scrollLeft = slider.scrollLeft + 1000
+  }
+
+  const slideRight =() => {
+    let slider = document.getElementById("slider")
+    slider.scrollLeft = slider.scrollLeft - 1000
+  }
   return (
     <>
       <motion.div
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className=" pt-48  w-layoutWidth  m-0 m-auto"
+        className="pt-11 w-full  lg:m-0 lg:m-auto lg:w-layoutWidth lg:pt-48"
       >
-        <section className="flex gap-11 mb-8">
+        <section className="flex gap-2 lg:gap-11 ">
           <div className="mb-2">
-            <h1 className="text-3xl tracking-wide ">Our Products</h1>
+            <h1 className="lg:tracking-wide lg:text-3xl">Our Products</h1>
           </div>
-           <CustomLine />
+          <CustomLine />
         </section>
 
-        <section className="flex flex-col justify-center items-center mb-24 ">
-          {/* <h1 className="text-4xl font-bold tracking-wide leading-relaxed">
-          The company owns proprietary software solutions
-        </h1> */}
+        <section className="hidden flex flex-col justify-center items-center mb-24 lg:block">
           <p className="text-2xl text-gray-600 text-center pt-4 font-light">
             With the use of software engineering best practices for our
             development processes, we've created bespoke software solutions
@@ -33,105 +64,51 @@ const OurProducts = () => {
             <br />
           </p>
         </section>
+       
 
-        <div className="grid grid-cols-2 place-items-center gap-y-8 mb-24">
-          <section className="bg-white p-11 drop-shadow-xl w-productsCardWidth h-productsCardHeight overflow-hidden rounded-2xl flex justify-center items-center">
-            <div className="">
-              <img src={image4} alt="logo" />
-            </div>
-          </section>
+        <h1 className="text-lg tracking-wide leading-relaxed text-center lg:font-bold pt-4 lg:text-2xl lg:hidden">
+          Have a Look At Our Products
+        </h1>
 
-          <section className=" w-productsCardWidth2 h-productscardHeight2 bg-[#192327] text-white px-11 drop-shadow-xl   rounded-2xl flex justify-center items-center">
-            <div className="">
-              <button className="bg-[#5BD9C7] mt-8 px-8 rounded">
-                HR TOOL
-              </button>
+        <div className=" w-full mt-4 flex justify-center items-center place-items-center gap-y-8 mb-24 bg-green lg:mt-0">
+          <MdOutlineKeyboardArrowLeft onClick={slideLeft} className="text-8xl text-white cursor-pointer  left-0" />
 
-              <h2 className="py-4  font-bold text-2xl">GPI PAS</h2>
-              <p className="pt-4 font-light leading-[2rem] text-ellipsis ">
-                We are a degital transformation consultancy and software
-                development company providing cutting-edge engineering
-                solutions. We proactively consult, design, develop & scale
-                robust web, mobile & cuustom software solutions that fuel
-                innovation & deliver digital success!
-              </p>
-            </div>
-          </section>
+          <div id="slider" className=" whitespace-nowrap overflow-scroll scroll-smooth place-items-center ">
+            {products.map((item, index) => {
+              return (
+                <section key={index} className="text-white p-8  gap-8 inline-block">
+                  <div className="flex flex-col gap-8  justify-center items-center lg:flex-row">
+                  <div>
+                    <img src={item.image} alt="product" className="w-[80%] lg:w-full"></img>
+                  </div>
+                  <div className=" place-items-center lg:pt-24">
+                    <div className="bg-white text-center text-green w-[240px] ">
+                      <h1 className="bg-white text-center text-green w-[240px] py-2 ">
+                        {item.title}{" "}
+                      </h1>
+                    </div>
+                    <div>
+                      <h1 className="text-2xl font-bold pt-4">{item.h1}</h1>
+                    </div>
 
-          <section className="  bg-white  p-11 drop-shadow-xl w-productsCardWidth h-productsCardHeight overflow-auto rounded-2xl flex justify-center items-center">
-            <div className="">
-              <img src={image1} alt="logo" />
-            </div>
-          </section>
-          <section className="bg-[#19683B] text-white p-11 drop-shadow-xl  w-productsCardWidth2 h-productscardHeight2 overflow-auto rounded-2xl flex justify-center items-center">
-            <div>
-              <button className="bg-[#FDAA60] px-8 rounded mt-8">
-                Oil & gas
-              </button>
+                    <p className="pt-4 w-[341px] whitespace-pre-line">{item.desc}</p>
 
-              <h2 className="py-4 font-bold text-2xl">GAS PLUS</h2>
-              <p className="pt-4 font-light leading-[2rem]">
-                We are a degital transformation consultancy and software
-                development company providing cutting-edge engineering
-                solutions. We proactively consult, design, develop & scale
-                robust web, mobile & cuustom software solutions that fuel
-                innovation & deliver digital success!
-              </p>
-            </div>
-          </section>
-
-          <section className=" w-productsCardWidth h-productsCardHeight bg-white p-11 drop-shadow-xl w-productsCardWidth h-productsCardHeight overflow-hidden rounded-2xl flex justify-center items-center">
-            {/* <div className="bg-green-300 w-24 h-24 p-2 text-4xl grid place-items-center rounded-full">
-            </div> */}
-            <div className="">
-              <img src={image3} alt="logo" />
-            </div>
-          </section>
-
-          <section className=" w-productsCardWidth h-productsCardHeight bg-[#137466] text-white p-11 drop-shadow-xl w-productsCardWidth2 h-productscardHeight2 overflow-auto rounded-2xl">
-            {/* <div className="bg-green-300 w-24 h-24 p-2 text-4xl grid place-items-center rounded-full">
-            </div> */}
-            <div>
-              <button className="bg-[#C3BFF4] px-8 rounded">e commerce</button>
-
-              <h2 className="py-4 font-bold text-2xl">Barafiri</h2>
-              <p className="pt-4 font-light leading-[2rem] ">
-                We are a degital transformation consultancy and software
-                development company providing cutting-edge engineering
-                solutions. We proactively consult, design, develop & scale
-                robust web, mobile & cuustom software solutions that fuel
-                innovation & deliver digital success!
-              </p>
-            </div>
-          </section>
-
-          <section className=" w-productsCardWidth h-productsCardHeight bg-white p-11 drop-shadow-xl w-productsCardWidth h-productsCardHeight overflow-hidden rounded-2xl flex justify-center items-center">
-            {/* <div className="bg-green-300 w-24 h-24 p-2 text-4xl grid place-items-center rounded-full">
-            </div> */}
-            <div className="">
-              <img src={image2} alt="logo" />
-            </div>
-          </section>
-          <section className=" w-productsCardWidth h-productsCardHeight bg-[#19683B] text-white p-11 drop-shadow-xl w-productsCardWidth2 h-productscardHeight2 overflow-auto rounded-2xl ">
-            {/* <div className="bg-green-300 w-24 h-24 p-2 text-4xl grid place-items-center rounded-full">
-            </div> */}
-            <div>
-              <button className="bg-[#FDAA60] px-8 rounded">
-                Card management
-              </button>
-
-              <h2 className="  py-4 font-bold text-2xl">Providus</h2>
-              <p className="pt-4 font-light leading-[2rem]  ">
-                We are a degital transformation consultancy and software
-                development company providing cutting-edge engineering
-                solutions. We proactively consult, design, develop & scale
-                robust web, mobile & cuustom software solutions that fuel
-                innovation & deliver digital success!
-              </p>
-            </div>
-          </section>
+                    <div className="flex gap-2 pt-4">
+                      <a href="#f" className="border-b-2 border-white">
+                        {item.productLink}
+                      </a>
+                      <MdOutlineKeyboardArrowRight  className="mt-2 text-2xl" />
+                    </div>
+                  </div>
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+          <MdOutlineKeyboardArrowRight onClick={slideRight}className="text-8xl text-white cursor-pointer" />
         </div>
-      </motion.div>
+        </motion.div>
+      
     </>
   );
 };

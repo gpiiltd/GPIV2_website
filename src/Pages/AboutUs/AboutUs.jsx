@@ -3,6 +3,8 @@ import CustomLine from "../../Components/CustomLines/CustomLine";
 import ContactUs from "../Contact/ContactUs";
 import { motion } from "framer-motion";
 import bgImage from "../../Components/Assets/Group 37340.png";
+// import aboutImage2 from "../../Components/Assets/Group 37432.svg";
+
 import icon1 from "../../Components/Assets/Group 37369.png";
 import icon2 from "../../Components/Assets/Group 37371.png";
 import icon3 from "../../Components/Assets/Group 37372.png";
@@ -63,9 +65,9 @@ const AboutUs = () => {
         key={3}
         className="   grid   place-items-center lg:grid-cols-3"
       >
-        <div className="w-full h-[430.64px] bg-about-image flex justify-center items-center">
-          {/* <img src={image3} alt="aboutImg" /> */}
-          <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1>
+        <div className=" h-[430.64px] bg-aboutImage2 bg-no-repeat w-[482px]">
+          {/* <img src={aboutImage2} alt="aboutImg" /> */}
+          {/* <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1> */}
         </div>
         <div className="absolute right-0">
           <img src={bgImage} alt=""></img>
@@ -74,7 +76,8 @@ const AboutUs = () => {
           <h1 className=" hidden text-4xl  font-bold tracking-wide leading-relaxed lg:block">
             What GPI is all about
           </h1>
-          <p className=" text-lg tracking-wider leading-loose text-gray-500 lg:pr-11 lg:text-xl">
+          <div className="w-full">
+          <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
             Global Performance Index (GPI) has become an Automation Solutions
             Company in cutting edge technology for digital transformation of
             business in Africa. having recieved the ISO 9001 Quality award for
@@ -82,11 +85,12 @@ const AboutUs = () => {
             Nigerian export promotions council(NEPC) As the Nigerian Tech
             platform advancig opportunities for the Nigerian export frontier.
           </p>
-          <p className="pt-8 text-lg tracking-wider leading-loose text-gray-500 lg:text-xl">
+          <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
             We are an Information Technology Company providing extensive Digital
             transformation solutions and Business automation for the public and
             private sector.
           </p>
+          </div>
         </div>
       </motion.div>
       </section>
@@ -99,30 +103,30 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={4} 
-        className="w-layoutWidth  m-0 m-auto items-center">
-        <section className="flex flex-col justify-center items-center mb-24 ">
-          <h1 className="text-4xl font-bold tracking-wide leading-relaxed">
+        className=" m-0 m-auto items-center lg:w-layoutWidth">
+        <section className="flex flex-col justify-center items-center mb-11 lg:mb-24 ">
+          <h1 className="text-2xl font-thin tracking-wide leading-relaxed lg:font-bold lg:text-4xl">
             Strategy and design
           </h1>
-          <p className="text-2xl text-gray-600 text-center pt-4 font-light">
+          <p className="text-xs tracking-wide  px-4 text-gray-600 text-center pt-4 font-thin lg:font-light lg:text-2xl">
             Our in-house business cunsultants and stragtegists has garnered the
             experiencento help you launch your ninnovative digital product
           </p>
         </section>
 
-        <div className=" grid grid-cols-3 gap-y-2 place-items-center gap-x-0 mb-24 ">
+        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 lg:gap-y-2 lg:grid-cols-3">
           <motion.section
             whileInView={{ y: [20, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             key={5}
-            className=" bg-white p-11 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 w-aboutusCardWidth h-aboutCardsHeight"
+            className=" bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
             <div className=" text-4xl  ">
               <img src={icon1} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Software development</h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Being a leading software development and IT company, we help you
                 bring your most complex software vision to life with our
                 leadding full-cycle custom application development service. So
@@ -136,14 +140,14 @@ const AboutUs = () => {
             whileInView={{ x: [60, 0], opacity: [0, 2] }}
             transition={{ duration: 1.0 }}
             key={6}
-            className="bg-white p-11 drop-shadow-xl overflow-hidden rounded-2xl w-aboutusCardWidth h-aboutCardsHeight hover:scale-75"
+            className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
            <div>
               <img src={icon6} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Business Analytics</h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Our business analytics approach empowers you to intelligently
                 aggregate and segment your data so that you can extract
                 insightful conclusions that fuel smarter business decisions and
@@ -152,13 +156,13 @@ const AboutUs = () => {
             </div>
           </motion.section>
 
-          <section className="bg-white p-11 drop-shadow-xl  overflow-hidden rounded-2xl w-aboutusCardWidth h-aboutCardsHeight">
+          <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
           <div >
               <img src={icon2} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Business Automation</h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed  lg:font-light  lg:text-base lg:text-black">
                 Using modern technologies, we build with efficiency and skill,
                 creating flexible and scalable business-driven solutions
               </p>
@@ -168,14 +172,14 @@ const AboutUs = () => {
             whileInView={{ x: [60, 0], opacity: [0, 2] }}
             transition={{ duration: 1.2 }}
             key={7}
-            className="bg-white p-11 drop-shadow-xl overflow-hidden rounded-2xl w-aboutusCardWidth h-aboutCardsHeight"
+            className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
             <div >
               <img src={icon3} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Performance Management</h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 We create products and solutions that help team leads, and
                 supervisors assign, measure and review KPIs based on smart
                 objective
@@ -183,13 +187,13 @@ const AboutUs = () => {
             </div>
           </motion.section>
 
-          <section className="bg-white p-11 drop-shadow-xl overflow-hidden rounded-2xl w-aboutusCardWidth h-aboutCardsHeight">
+          <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
           <div >
               <img src={icon4} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Design</h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Our design approach is to simplify. Gaining insights from key
                 stakeholders and the market at large, We embrace the joy of
                 creating something unique that is easy for end users. So you can
@@ -202,14 +206,14 @@ const AboutUs = () => {
             whileInView={{ y: [60, 0], opacity: [0, 2] }}
             transition={{ duration: 1.0 }}
             key={8}
-            className="bg-white p-11 drop-shadow-xl  overflow-hidden rounded-2xl w-aboutusCardWidth h-aboutCardsHeight"
+            className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
             <div>
               <img src={icon5} alt="icon" />
             </div>
             <div>
               <h2 className="py-4 font-bold">Training </h2>
-              <p className="pt-4 font-light">
+              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 We're equiped with expert knowledge across multiple
                 technological specialisms. We train on industry best practices
                 to help your business grow and utilize the ease that technology
@@ -221,7 +225,7 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      <ContactUs />
+      {/* <ContactUs /> */}
     </>
   );
 };
