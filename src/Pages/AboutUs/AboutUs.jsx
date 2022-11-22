@@ -44,10 +44,10 @@ const AboutUs = () => {
           <img src={aboutImage} alt="aboutImg" />
         </div>
         <div className="text-white">
-          <h1 className="text-4xl font-bold tracking-wide leading-normal lg:text-5xl">
+          <h1 className="text-4xl font-bold tracking-wide leading-normal lg:tracking-wider lg:leading-normal lg:text-5xl">
             We Assured,We Deliver.Team Effort
           </h1>
-          <p className="pt-4 font-light  text-gray-200 tracking-wide text-xl lg:font-thin">
+          <p className="pt-4 font-light  text-gray-200 tracking-wide text-xl  lg:font-thin">
             We have submitted projects to variuos  clients and we receive{" "}
            
             great reviews
@@ -225,7 +225,7 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      {/* <ContactUs /> */}
+      <ContactUs />
     </>
   );
 };

@@ -9,8 +9,10 @@ const TextArea = (props) => {
         cols="55"
         value={value}
         placeholder={placeholder}
-        className=" p-2 mb-11 border-b-2 border-2 placeholder:text-black w-full outline-none"
-      ></textarea>
+        className=" p-2 mb-2 border-b-2 border-2 text-black placeholder:text-black w-full outline-none lg:mb-11"
+      >
+
+      </textarea>
     </div>
   );
 };

@@ -2,126 +2,166 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import chat from "../../Components/Assets/chat 1.png";
 import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg";
+import TextArea from "../../Components/TextArea/TextArea";
 
 const ContactUs = () => {
-  const [values, setValues] = useState({
+  // const [values, setValues] = useState({
+  //   fullName: "",
+  //   email: "",
+  //   number: "",
+  // });
+  // const [success, setsuccess] = useState("");
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .send("service_37895nb", "template_z7uhva9", values, "9gQTInhcjKsOaQ_Ik")
+  //     .then(
+  //       (response) => {
+  //         console.log("SUCCESS!", response);
+  //         setValues({
+  //           fullName: "",
+  //           email: "",
+  //           number: "",
+  //         });
+  //         setsuccess("SUCCESS");
+  //       },
+  //       (error) => {
+  //         console.log("FAILED...", error);
+  //       }
+  //     );
+  // };
+
+  // useEffect(() => {
+  //   if (success === "SUCCESS") {
+  //     setTimeout(() => {
+  //       setsuccess("");
+  //     }, 3000);
+  //   }
+  // }, [success]);
+  const [userData, setUserData] = useState({
     fullName: "",
     email: "",
     number: "",
+    message: "",
   });
-  const [success, setsuccess] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .send("service_37895nb", "template_z7uhva9", values, "9gQTInhcjKsOaQ_Ik")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response);
-          setValues({
-            fullName: "",
-            email: "",
-            number: "",
-          });
-          setsuccess("SUCCESS");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  };
-
-  useEffect(() => {
-    if (success === "SUCCESS") {
-      setTimeout(() => {
-        setsuccess("");
-      }, 3000);
-    }
-  }, [success]);
+  const [successMsg, setSuccessMsg] = useState("");
+  const { fullName, email, number, message } = userData;
 
   const handleChange = (e) => {
-    setValues((values) => ({
-      ...values,
-      [e.target.name]: e.target.value,
-    }));
+    setUserData({ ...userData, [e.target.name]: e.target.value });
   };
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://v1.nocodeapi.com/gpi/google_sheets/NyOmNSHMjYnovYIg?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [fullName, email, number, message, new Date().toLocaleDateString()],
+          ]),
+        }
+      );
+      await response.json();
+      console.log("result", response);
+      // if (response.status === 200) {
+      //   setTimeout(() => {
+      //     setSuccessMsg("form submitted successfullt");
+      //    setSuccessMsg("")
+      //   }, 2000);
+      // }
+      setUserData({
+        ...userData,
+        fullName: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
-      <div className=" relative mt-24 w-full h-[689px]  bg-gradient-to-tl from-purple-900 to-green-700">
+      <div className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600">
         <img
           src={chatBg}
           alt=".."
-          className="w-full h-full object-cover mix-blend-overlay absolute"
+          className="w-full h-full object-cover mix-blend-overlay absolute bg-black"
         ></img>
 
-        {/* {success && renderAlert()} */}
-        {/* <section className="flex justify-between"> */}
-        <div className="flex justify-center items-center">
+        <div className="flex flex-col-reverse justify-center items-center z-40 p-4  lg:p-11 text-white gap-11 lg:flex-row">
+         
+            {successMsg }
+      
           <form
             onSubmit={handleSubmit}
-            className=" flex flex-col  bg-white w-2/5 p-11 rounded-3xl"
+            className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
           >
-            <label htmlFor="usernameInput" className="font-bold mb-4">
-              Name/Company name
-            </label>
-
+            <div className="flex flex-col lg:gap-8 lg:flex-row">
+              <input
+                value={fullName}
+                onChange={handleChange}
+                name="fullName"
+                type="text"
+                className="py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 "
+                placeholder="Name:"
+              />
+              <input
+                value={number}
+                onChange={handleChange}
+                className="py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 "
+                name="number"
+                type="text"
+                placeholder="Phone:"
+              />
+            </div>
             <input
-              value={values.fullName}
+              value={email}
               onChange={handleChange}
-              name="fullName"
-              type="text"
-              className=" p-4 mb-11 rounded-3xl shadow"
-              placeholder="Gift owunyirigbo"
-            />
-            <label htmlFor="usernameInput" className="font-bold mb-4">
-              Email
-            </label>
-
-            <input
-              value={values.email}
-              onChange={handleChange}
-              className=" p-4 mb-11 rounded-3xl shadow"
+              className="py-2 mb-4 text-black placeholder:text-black border-b border-black lg:border-b-2 lg;mb-11 lg:p-4"
               name="email"
               type="text"
-              placeholder="emaill"
+              placeholder="Email:"
             />
-            <label htmlFor="usernameInput" className="font-bold mb-4">
-              Phone number
-            </label>
-
-            <input
-              value={values.number}
-              onChange={handleChange}
-              className=" p-4 mb-11 rounded-3xl shadow"
-              name="number"
-              type="text"
-              placeholder="Phone number"
+            <TextArea
+              name="message"
+              value={message}
+              handleChange={handleChange}
+              placeholder="Please drop a message"
+              className="text-black"
             />
 
             <button
-              className="border-2 border-green mt-4 py-3 px-8 rounded-2xl cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300"
+              className="border-2 border-green py-2  px-2  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
               type="submit"
             >
-              Submit
+              Submit your Message
             </button>
           </form>
-          <div className="pt-18">
-            <img src={chat} alt="img" />
-            {/* <HiChatAlt2 className="text-green-600 text-8xl font-bold"/> */}
-            <h1 className="text-6xl  tracking-wide leading-relaxed">
-              Chat with us <br /> Today
+          <div className=" z-40  lg:w-2/5">
+            <h1 className="text-3xl  tracking-wide leading-tight font-bold lg:text-5xl">
+              Have a Project? We would love to hear from you
             </h1>
+            <p className="pt-2 lg:pt-8">
+              +23470000334 <br />
+              <span className="pt-4">
+                Baderinwa Alabi street Lekki, Phase 1
+              </span>
+            </p>
           </div>
         </div>
-        {/* </section> */}
       </div>
     </>
   );
 };
-const renderAlert = () => (
-  <div className="px-4 py-3 leading-normal text-green-700  rounded mb-5 text-center ">
-    <p>Message sent successfully</p>
-  </div>
-);
+// const renderAlert = () => (
+//   <div className="px-4 py-3 leading-normal text-green-700  rounded mb-5 text-center ">
+//     <p>Message sent successfully</p>
+//   </div>
+// );
 export default ContactUs;
