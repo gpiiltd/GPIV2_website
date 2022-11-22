@@ -46,7 +46,7 @@ const Experience = () => {
         key={1}
         className="pt-4 sm:pt-16 w-homePageWidth grid place-items-center "
       >
-        <div className="block sm:flex gap-24 pl-8 sm:pl-24">
+        <div className="block md:flex gap-24 pl-8 sm:pl-24">
           <section className="pt-0 sm:pt-24">
             <div>
               <div>

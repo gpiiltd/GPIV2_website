@@ -38,15 +38,15 @@ const WhyChoseUs = () => {
           <div className="relative">
             <img src={bimage} alt="..." className=""></img>
           </div>
-          <div className="absolute flex gap-8 sm:pt-24 sm:pl-24">
-            <div className="  sm:w-64 sm:h-96 bg-black p-11 rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11  ">
+          <div className="absolute flex gap-4 sm:gap-8 sm:pt-24 sm:pl-24">
+            <div className="  sm:w-64 sm:h-96 bg-black p-5 py-12 sm:p-11 rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11  ">
               <p>
                 We are skilled professionals that apply our passion for
                 technology to create successfull products and solutions for our
                 clients
               </p>
             </div>
-            <div className=" sm:w-64 sm:h-96 bg-homePageCardGreen p-11 rounded-tl-[70px] rounded-br-[70px] grid place-items-center ">
+            <div className=" sm:w-64 sm:h-96 bg-homePageCardGreen p-5 py-12 sm:p-11 rounded-tl-[70px] rounded-br-[70px] grid place-items-center ">
               <p>
                 Our design-focused approach and project execution processes help
                 you to deliver the right solutions at the right time{" "}
