@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <section className="bg-gray-100 w-full bg-white p-11 py-24 border-lightSilver flex flex-col   bottom-0 gap-11">
-        <div className="flex justify-around">
+        <div className="flex flex-col gap-8 lg:justify-around lg:flex-row">
           <div className="flex flex-col gap-4">
             <div className="">
               <img src={logo} alt=".." onClick={homeRoute} className="cursor-pointer"></img>

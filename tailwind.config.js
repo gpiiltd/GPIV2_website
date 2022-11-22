@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "Home-image": "url('/src/Components/Assets/background4.jpeg')",
+        "aboutImage2": "url('/src/Components/Assets/Group 37432.svg')",
+        "chatBg": "url('/src/Components/Assets/trabajoequipoteam-4200837_1920 3.svg')",
+
        
       },
       colors: {
