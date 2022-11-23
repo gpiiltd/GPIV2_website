@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../Assets/gpi 3.svg";
+import { BsFillCaretDownFill } from "react-icons/bs";
 
 const Navbar = () => {
+  const [listItems, setListItems] = useState(false);
+
   let navigate = useNavigate();
 
   const routeChange = () => {
@@ -13,6 +16,10 @@ const Navbar = () => {
   };
   const homeRoute = () => {
     navigate("/");
+  };
+
+  const showDropDown = () => {
+    setListItems(!listItems);
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -75,14 +82,30 @@ const Navbar = () => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-8">
-              <li className="pt-4 cursor-pointer" onClick={homeRoute}>
+              <li className="md:pt-4 cursor-pointer" onClick={homeRoute}>
                 Home
               </li>
 
-              <li className="pt-4 cursor-pointer" onClick={routeChange}>
-                About us
-              </li>
-              <li className="pt-4 cursor-pointer" onClick={pathChange}>
+              <div>
+                <li
+                  className=" md:pt-4 cursor-pointer flex gap-1 "
+                  onClick={showDropDown}
+                >
+                  About GPI
+                  <BsFillCaretDownFill className="mt-1" />
+                </li>
+                {listItems ? (
+                  <ul className="absolute bg-white px-6  md:p-4 rounded-lg leading-10 tracking-wide shadow-xl md:w-[10%]">
+                    <li className="cursor-pointer" onClick={routeChange}>
+                      About us
+                    </li>
+                    <li className="cursor-pointer" onClick={pathChange}>
+                      products
+                    </li>
+                  </ul>
+                ) : null}
+              </div>
+              <li className="md:pt-4 cursor-pointer" onClick={pathChange}>
                 Products
               </li>
 
