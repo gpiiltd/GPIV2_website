@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BsFillCaretDownFill } from "react-icons/bs";
-import logo from "../Assets/gpi 3.svg"
+import logo from "../Assets/gpi 3.svg";
 
 const Navbar = () => {
-  const [listItems, setListItems] = useState(false);
   let navigate = useNavigate();
 
   const routeChange = () => {
@@ -17,44 +15,82 @@ const Navbar = () => {
     navigate("/home");
   };
 
-  const showDropDown=() => {
-    setListItems(!listItems)
-  }
- 
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
   return (
     <>
-      <section className="bg-white w-homePageWidth top-0 p-6 pl-11 shadow-lg fixed flex justify-between z-40 relative">
-        <div className=" ">
-          <img src={logo} alt="logo" className="w-24 h-16 mb-11 absolute cursor-pointer" onClick={homeRoute} ></img>
-        </div>
-        <div className="flex flex-row">
-          <ul className="flex flex-row gap-8">
-            {/* {navLinks.map((link, index) => ( */}
-            <li className="pt-4 cursor-pointer" onClick={homeRoute}>
-              {/* {link} */}
-              Home
-            </li>
-            <div>
-            <li className="pt-4 cursor-pointer flex gap-1 " onClick={showDropDown}>
-              About GPI
-              <BsFillCaretDownFill className="mt-1" />
-            </li>
-            {listItems? (
-               <ul className="absolute bg-white p-4 rounded-lg leading-10 tracking-wide shadow-xl w-[10%]">
-               <li className="cursor-pointer" onClick={routeChange}>About us</li>
-               <li className="cursor-pointer" onClick={pathChange}>products</li>
- 
-             </ul>
-            ):null}
-           
+      <section className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
+        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+            <div className=" ">
+              <img
+                src={logo}
+                alt="logo"
+                className="w-24 h-16 cursor-pointer"
+                onClick={homeRoute}
+              ></img>
             </div>
-            <li className="pt-4 cursor-pointer" onClick={pathChange}>Products</li>
-            
 
-            <li className="border-2 border-green py-3 px-8 rounded-full cursor-pointer">
-              Get In Touch
-            </li>
-          </ul>
+            <button
+              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              {navbarOpen ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 text-black"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 text-black"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
+          <div
+            className={
+              "lg:flex flex-grow items-center" +
+              (navbarOpen ? " flex pl-4" : " hidden")
+            }
+            id="example-navbar-danger"
+          >
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-8">
+              <li className="pt-4 cursor-pointer" onClick={homeRoute}>
+                Home
+              </li>
+
+              <li className="pt-4 cursor-pointer" onClick={routeChange}>
+                About us
+              </li>
+              <li className="pt-4 cursor-pointer" onClick={pathChange}>
+                Products
+              </li>
+
+              <li className="border-2 border-green py-3 px-8 rounded-full cursor-pointer">
+                Get In Touch
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>
