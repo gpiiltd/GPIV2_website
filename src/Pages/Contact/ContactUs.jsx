@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
-import chat from "../../Components/Assets/chat 1.png";
+import React, { useState} from "react";
+
 import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg";
 import TextArea from "../../Components/TextArea/TextArea";
 
@@ -87,7 +86,7 @@ const ContactUs = () => {
   };
   return (
     <>
-      <div className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600">
+      <div id="contact" className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600">
         <img
           src={chatBg}
           alt=".."

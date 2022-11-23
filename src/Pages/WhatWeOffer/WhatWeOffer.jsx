@@ -24,16 +24,16 @@ const WhatWeOffer = () => {
   };
   return (
     <>
-      <div className=" pt-48  w-layoutWidth  m-auto ">
-        <section className="ml-4 sm:ml-0 w-[75%] sm:w-[100%] flex gap-4  sm:gap-11 ">
+      <div className=" pt-24  w-layoutWidth  m-auto lg:pt-48">
+        <section className="flex gap-2 lg:gap-11 ">
           <div className="mb-4">
-            <h1 className="sm:text-3xl sm:tracking-wide  sm:w-100">What we offer</h1>
+            <h1 className="lg:tracking-wide lg:text-3xl">What we offer</h1>
           </div>
           <CustomLine />
         </section>
 
         <section className="sm:flex gap-4 pt-8 ">
-          <div className="bg-lBrown p-4  font-lg text-2xl rounded-2xl relative ">
+          <div className="bg-lBrown font-lg text-2xl rounded-2xl relative lg:text-2xl">
             <div
               className="p-8 flex gap-4  "
               onMouseEnter={showDropDown}
@@ -62,9 +62,9 @@ const WhatWeOffer = () => {
               <BsFillCaretDownFill className="mt-2" />
             </div>
           </div>
-          <div className="bg-lgray  font-lg text-2xl rounded-2xl  mt-12 sm:mt-0">
+          <div className="bg-lgray font-lg text-2xl rounded-2xl  mt-12 sm:mt-0">
             <div
-              className="p-8 flex gap-4 wrap-no-wrap relative"
+              className="p-6 flex gap-4 wrap-no-wrap relative"
               // onMouseEnter={showDropDown}
               onMouseLeave={HideDropDown}
             >

@@ -25,9 +25,9 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={1}
-        className=" pt-24  w-layoutWidth  m-0 m-auto"
+        className=" pt-8 w-full lg:w-layoutWidth  lg:m-0 lg:m-auto lg:pt-16"
       >
-        <section className="flex gap-2 lg:gap-11 ">
+        <section className="flex gap-2 lg:gap-11 px-6 lg:px-0">
           <div className="mb-4">
             <h1 className="lg:tracking-wide lg:text-3xl">About Us</h1>
           </div>
@@ -38,7 +38,7 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={2}
-        className=" mt-11 pt-8 py-11 px-11 w-full  mb-11 bg-[#19683B]  items-center place-items-center grid gap-11 lg:grid-cols-2 "
+        className=" mt-11 pt-8 py-11 mb-11 bg-[#19683B] px-4 items-center place-items-center grid gap-11 lg:grid-cols-2 lg:px-0"
       >
         <div>
           <img src={aboutImage} alt="aboutImg" />
@@ -47,14 +47,14 @@ const AboutUs = () => {
           <h1 className="text-4xl font-bold tracking-wide leading-normal lg:tracking-wider lg:leading-normal lg:text-5xl">
             We Assured,We Deliver.Team Effort
           </h1>
-          <p className="pt-4 font-light  text-gray-200 tracking-wide text-xl  lg:font-thin">
+          <p className="pt-4 font-light  text-gray-200 tracking-wide lg:text-xl  lg:font-thin">
             We have submitted projects to variuos  clients and we receive{" "}
            
             great reviews
           </p>
         </div>
       </motion.div>
-      <section className ="pt-8 py-11  w-full  mb-11">
+      <section className ="pt-8 py-11  w-full  mb-11 px-4">
       <h1 className="mb-11  text-4xl tracking-wider leading-relaxed lg:font-bold lg:hidden">
             What GPI is All About
           </h1>
@@ -63,16 +63,16 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={3}
-        className="   grid   place-items-center lg:grid-cols-3"
+        className="grid place-items-center lg:grid-cols-3"
       >
-        <div className=" h-[430.64px] bg-aboutImage2 bg-no-repeat w-[482px]">
+        <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
           {/* <img src={aboutImage2} alt="aboutImg" /> */}
           {/* <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1> */}
         </div>
         <div className="absolute right-0">
           <img src={bgImage} alt=""></img>
         </div>
-        <div className="text-black  px-11 lg:col-span-2">
+        <div className="text-black  lg:px-11 lg:col-span-2">
           <h1 className=" hidden text-4xl  font-bold tracking-wide leading-relaxed lg:block">
             What GPI is all about
           </h1>
@@ -103,7 +103,7 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={4} 
-        className=" m-0 m-auto items-center lg:w-layoutWidth">
+        className="w-full px-4 items-center lg:m-auto lg:m-0 lg:w-layoutWidth">
         <section className="flex flex-col justify-center items-center mb-11 lg:mb-24 ">
           <h1 className="text-2xl font-thin tracking-wide leading-relaxed lg:font-bold lg:text-4xl">
             Strategy and design
@@ -137,7 +137,7 @@ const AboutUs = () => {
           </motion.section>
 
           <motion.section
-            whileInView={{ x: [60, 0], opacity: [0, 2] }}
+            whileInView={{ y: [60, 0], opacity: [0, 2] }}
             transition={{ duration: 1.0 }}
             key={6}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
@@ -169,7 +169,7 @@ const AboutUs = () => {
             </div>
           </section>
           <motion.section
-            whileInView={{ x: [60, 0], opacity: [0, 2] }}
+            whileInView={{ y: [60, 0], opacity: [0, 2] }}
             transition={{ duration: 1.2 }}
             key={7}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"

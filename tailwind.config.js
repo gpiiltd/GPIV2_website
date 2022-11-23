@@ -38,6 +38,9 @@ module.exports = {
       },
     },
   },
+  // screens:{
+  //   'sm':"540px"
+  // },
   plugins: [
     require('tailwind-scrollbar-hide')
   ],

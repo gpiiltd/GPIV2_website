@@ -3,9 +3,9 @@ import CustomLine from "../../Components/CustomLines/CustomLine";
 import image1 from "../../Components/Assets/Group 37383.svg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-// import image2 from "../../Components/Assets/Group 66.png";
-// import image3 from "../../Components/Assets/logo.svg";
-// import image4 from "../../Components/Assets/GPI PAS LOGO.png";
+import image2 from "../../Components/Assets/Group 37385 (1).svg";
+import image3 from "../../Components/Assets/Group 37387 (1).svg";
+import image4 from "../../Components/Assets/Group 37379.svg";
 import { motion } from "framer-motion";
 
 const OurProducts = () => {
@@ -18,28 +18,35 @@ const OurProducts = () => {
       productLink: "visit website",
     },
     {
-      title: "user Management",
-      image: image1,
-      h1: "Lagos ideation innovate",
+      title: "Card Management",
+      image: image2,
+      h1: "Providus Bank ",
       desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
       productLink: "visit website",
     },
     {
-      title: "user Management",
-      image: image1,
-      h1: "Lagos ideation innovate",
-      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      title: "Oil & Gas",
+      image: image3,
+      h1: "Gas Plus",
+      desc: "Gas plus Synergy limited (GPSL) is a distinguish company in the African gas sector specialising in gas field development, maintainance conveyance and value optimisation. Gasplus software helps to create onshore and offshore production support, Gas trade and aggregation enablement",
+      productLink: "visit website",
+    },
+    {
+      title: "ecommerce",
+      image: image4,
+      h1: "Barafiri",
+      desc: "This Software helps to measure the level of success in reaching your business objectives, by monitoring and analyzing key information, Gives access to template that shows detailed reporting or various performance improvements, and also help review the level of employee effectives, efficiency and quality of work in real time.",
       productLink: "visit website",
     },
   ];
   const slideLeft =() => {
     let slider = document.getElementById("slider")
-    slider.scrollLeft = slider.scrollLeft + 1000
+    slider.scrollLeft = slider.scrollLeft + 1100
   }
 
   const slideRight =() => {
     let slider = document.getElementById("slider")
-    slider.scrollLeft = slider.scrollLeft - 1000
+    slider.scrollLeft = slider.scrollLeft - 1100
   }
   return (
     <>
@@ -47,9 +54,9 @@ const OurProducts = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className="pt-11 w-full  lg:m-0 lg:m-auto lg:w-layoutWidth lg:pt-48"
+        className="pt-8 w-full lg:m-0 lg:m-auto lg:w-layoutWidth lg:pt-16"
       >
-        <section className="flex gap-2 lg:gap-11 ">
+        <section className="flex gap-2 lg:gap-11 px-6 lg:px-0">
           <div className="mb-2">
             <h1 className="lg:tracking-wide lg:text-3xl">Our Products</h1>
           </div>

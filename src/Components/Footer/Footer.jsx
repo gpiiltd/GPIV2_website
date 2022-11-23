@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../Assets/gpi 3.svg"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
+
 
 
 
@@ -41,7 +43,16 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <div className="text-xlg ">Get Started</div>
             <ul className="font-light">
-              <li className="cursor-pointer">Chat with Us</li>
+              <li className="cursor-pointer">
+              <Link
+              to="contact"
+              smooth={true}
+              duration={700}
+              className="cursor-pointer"
+            >
+              chat with us
+              </Link>
+                </li>
             </ul>
           </div>
         </div>
