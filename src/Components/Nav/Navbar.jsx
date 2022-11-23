@@ -12,7 +12,7 @@ const Navbar = () => {
     navigate("/products");
   };
   const homeRoute = () => {
-    navigate("/home");
+    navigate("/");
   };
 
   const [navbarOpen, setNavbarOpen] = useState(false);
