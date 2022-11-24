@@ -4,6 +4,8 @@ import image1 from "../../Components/Assets/image 9.png";
 import image2 from "../../Components/Assets/Group 66.png";
 import image3 from "../../Components/Assets/image 7.svg";
 import homeImg from "../../Components/Assets/Component 8.png";
+import bimage from "../../Components/Assets/Group 1.png";
+
 import { Link } from "react-scroll";
 
 
@@ -46,23 +48,23 @@ const Experience = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className="pt-4 w-full px-8 grid place-items-center md:w-homePageWidth  lg:px-0 lg:pt-16 lg:px-8"
+        className="pt-4 w-full px-8 grid place-items-center   lg:px-8 lg:px-0 "
       >
         <div className="flex flex-col gap-4 md:flex-row md:gap-24">
-          <section className="pt-4 lg:pt-24">
+          <section className="pt-4 lg:pt-24 md:pl-8">
             <div>
               <div>
-                <h1 className="text-3xl font-bold tracking-wide leading-relaxed md:text-6xl md:leading-relaxed md:tracking-wide">
+                <h1 className="text-3xl font-bold tracking-wide leading-relaxed md:text-5xl  md:leading-relaxed md:tracking-wide ">
                   {currentInfo.Title}
                   <br /> {currentInfo.break}
                 </h1>
-                <p className="absolute text-xs text-gray-600 pt-4 font-light md:text-xl md:relative">
+                <p className="absolute text-xs text-gray-600 pt-4 font-light md:text-base md:relative">
                   {currentInfo.Description}
                   <br /> {currentInfo.DescriptionBreak}
                 </p>
               </div>
 
-              <button className="hidden border-2 border-green mt-4 py-3 px-8  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-green  text-white duration-300 md:block ">
+              <button className="hidden border-2 border-green mt-4 py-3 px-8  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-green  text-white duration-300 md:block md:mt-8">
               <Link
               to="contact"
               smooth={true}
@@ -74,12 +76,15 @@ const Experience = () => {
               </button>
             </div>
           </section>
-          <section className="">
+          <section className="relative flex ">
             <div className="">
-              <img src={homeImg} alt="home img" className=" w-full h-full mt-16  md:mt-0" />
+              <img src={bimage} alt="home img" className="pt-4 md:w-[750px] " />
+            </div>
+            <div className="absolute">
+              <img src={homeImg} alt="home img" className="  h-full mt-16  md:mt-0 md:pt-11 md:pl-28" />
             </div>
           </section>
-          <button className=" block w-[200px] mt-2 border-2 border-green py-3 px-2 rounded-lg cursor-pointer bg-green hover:bg-[#19643B]  text-white duration-300 md:hidden md:mt-4 md:px-8">
+          <button className=" block w-[200px] mt-24 border-2 border-green py-3 px-2 rounded-lg cursor-pointer bg-green hover:bg-[#19643B]  text-white duration-300 md:hidden md:mt-4 md:px-8">
           <Link
               to="contact"
               smooth={true}
@@ -90,11 +95,11 @@ const Experience = () => {
               </Link>
               </button>
         </div>
-        <section className=" px-8 mt-11 rounded-lg flex flex-col  justify-center items-center md:bg-white md:gap-8 lg:w-[810px] lg:flex-row  lg:mt-24">
+        <section className=" px-8 mt-11 rounded-lg flex flex-col  justify-center items-center md:bg-white md:gap-8 md:w-[810px] md:flex-row  ">
           <div className=" font-bold  ">
             <p>Our clients</p>
           </div>
-          <div className="bg-white px-4   flex gap-11 justify-center items-center md:gap-24 md:pl-4 md:border-l-2">
+          <div className="bg-white px-4  rounded-tr-lg flex gap-11 justify-center items-center lg:rounded-none md:gap-24 md:pl-4 md:border-l-2">
             <div>
               <img
                 src={image2}

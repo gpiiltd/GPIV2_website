@@ -43,10 +43,10 @@ const WhyChoseUs = () => {
         </section>
         <section className=" flex ">
           <div className="relative">
-            <img src={bimage} alt="..." className=""></img>
+            <img src={bimage} alt="..." className="w-[730px]"></img>
           </div>
           <div className="pt-4 absolute flex gap-4 gap-8 lg:pt-24  lg:pl-0">
-            <div className="px-5 sm:w-64 sm:h-96 bg-black  rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 lg:py-12 ">
+            <div className="px-5 sm:w-64 sm:h-96 bg-black  rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 lg:py-12 lg:ml-28">
               <p>
                 We are skilled professionals that apply our passion for
                 technology to create successfull products and solutions for our
