@@ -26,8 +26,8 @@ const WhyChoseUs = () => {
       <div className=" flex flex-col lg:flex-row ">
         <section className="  lg:pt-28 lg:mr-24">
           <div className="">
-            <h1 className="text-5xl tracking-wide leading-normal lg:leading-relaxed lg:text-6xl">
-              We promise We deliver
+            <h1 className="text-5xl tracking-wide leading-normal lg:leading-relaxed lg:text-5xl">
+              We promise <br />We deliver
             </h1>
             <button className="hidden border-2 border-green mt-4 py-3 px-8 rounded-xl cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:block">
               <Link

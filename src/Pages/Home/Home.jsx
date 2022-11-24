@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import image1 from "../../Components/Assets/image 9.png";
 import image2 from "../../Components/Assets/Group 66.png";
-import image3 from "../../Components/Assets/logo.svg";
+import image3 from "../../Components/Assets/image 7.svg";
 import homeImg from "../../Components/Assets/Component 8.png";
 import { Link } from "react-scroll";
 
@@ -90,21 +90,21 @@ const Experience = () => {
               </Link>
               </button>
         </div>
-        <section className="  px-8 mt-11 rounded-lg  flex flex-col gap-8 justify-center items-center lg:shadow-lg lg:w-[45%] lg:flex-row lg:bg-white lg:mt-24">
-          <div className=" font-bold lg:border-r-2 ">
+        <section className=" px-8 mt-11 rounded-lg flex flex-col  justify-center items-center md:bg-white md:gap-8 lg:w-[810px] lg:flex-row  lg:mt-24">
+          <div className=" font-bold  ">
             <p>Our clients</p>
           </div>
-          <div className="bg-white px-4 rounded-lg flex gap-11 justify-center items-center md:gap-24 md:pl-4">
+          <div className="bg-white px-4   flex gap-11 justify-center items-center md:gap-24 md:pl-4 md:border-l-2">
             <div>
               <img
-                src={image1}
+                src={image2}
                 alt="logo"
                 className=" duration-500 pt-4 cursor-pointer w-32"
               />
             </div>
             <div>
               <img
-                src={image2}
+                src={image1}
                 alt="logo"
                 className=" duration-500   cursor-pointer w-32"
               />
