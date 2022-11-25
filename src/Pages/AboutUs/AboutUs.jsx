@@ -12,8 +12,6 @@ import icon4 from "../../Components/Assets/Group 37373.png";
 import icon5 from "../../Components/Assets/Group 37374.png";
 import icon6 from "../../Components/Assets/Group 37370 (1).png";
 
-
-
 import aboutImage from "../../Components/Assets/image 9.svg";
 
 // import image3 from "../../Components/Assets/Mask group.svg";
@@ -38,61 +36,61 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={2}
-        className=" mt-11 pt-8 py-11 mb-11 bg-[#19683B] px-4 items-center place-items-center grid gap-11 lg:grid-cols-2 lg:px-0"
+        className="h-[693px] mt-11 pt-8 py-11 mb-11 bg-[#19683B] px-4 items-center place-items-center grid  lg:grid-cols-2 lg:pl-11"
       >
         <div>
-          <img src={aboutImage} alt="aboutImg" />
+          <img src={aboutImage} alt="aboutImg" className="md:w-[758.39px]" />
         </div>
-        <div className="text-white">
+        <div className="text-white md:w-[464.92px]">
           <h1 className="text-4xl font-bold tracking-wide leading-normal lg:tracking-wider lg:leading-normal lg:text-5xl">
             We Assured,We Deliver.Team Effort
           </h1>
-          <p className="pt-4 font-light  text-gray-200 tracking-wide lg:text-xl  lg:font-thin">
-            We have submitted projects to variuos  clients and we receive{" "}
-           
-            great reviews
+          <p className="pt-4 font-light  text-gray-200 tracking-wide lg:text-2xl  lg:font-thin">
+            We have submitted projects to variuos clients and we receive great
+            reviews
           </p>
         </div>
       </motion.div>
-      <section className ="pt-8 py-11  w-full  mb-11 px-4">
-      <h1 className="mb-11  text-4xl tracking-wider leading-relaxed lg:font-bold lg:hidden">
-            What GPI is All About
-          </h1>
-     
-      <motion.div
-        whileInView={{ y: [20, 0], opacity: [0, 1] }}
-        transition={{ duration: 1.5 }}
-        key={3}
-        className="grid place-items-center lg:grid-cols-3"
-      >
-        <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
-          {/* <img src={aboutImage2} alt="aboutImg" /> */}
-          {/* <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1> */}
-        </div>
-        <div className="absolute right-0">
-          <img src={bgImage} alt=""></img>
-        </div>
-        <div className="text-black  lg:px-11 lg:col-span-2">
-          <h1 className=" hidden text-4xl  font-bold tracking-wide leading-relaxed lg:block">
-            What GPI is all about
-          </h1>
-          <div className="w-full">
-          <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
-            Global Performance Index (GPI) has become an Automation Solutions
-            Company in cutting edge technology for digital transformation of
-            business in Africa. having recieved the ISO 9001 Quality award for
-            performance and productivity. GPI has also been identified by the
-            Nigerian export promotions council(NEPC) As the Nigerian Tech
-            platform advancig opportunities for the Nigerian export frontier.
-          </p>
-          <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
-            We are an Information Technology Company providing extensive Digital
-            transformation solutions and Business automation for the public and
-            private sector.
-          </p>
+      <section className="pt-8 py-11  w-full  mb-11 px-4">
+        <h1 className="mb-11  text-4xl tracking-wider leading-relaxed lg:font-bold lg:hidden">
+          What GPI is All About
+        </h1>
+
+        <motion.div
+          whileInView={{ y: [20, 0], opacity: [0, 1] }}
+          transition={{ duration: 1.5 }}
+          key={3}
+          className="grid place-items-center lg:grid-cols-3"
+        >
+          <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
+            {/* <img src={aboutImage2} alt="aboutImg" /> */}
+            {/* <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1> */}
           </div>
-        </div>
-      </motion.div>
+          <div className="absolute right-0">
+            <img src={bgImage} alt=""></img>
+          </div>
+          <div className="text-black  lg:px-11 lg:col-span-2">
+            <h1 className=" hidden text-4xl  font-bold tracking-wide leading-relaxed lg:block">
+              What GPI is all about
+            </h1>
+            <div className="w-full">
+              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
+                Global Performance Index (GPI) has become an Automation
+                Solutions Company in cutting edge technology for digital
+                transformation of business in Africa. having recieved the ISO
+                9001 Quality award for performance and productivity. GPI has
+                also been identified by the Nigerian export promotions
+                council(NEPC) As the Nigerian Tech platform advancig
+                opportunities for the Nigerian export frontier.
+              </p>
+              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
+                We are an Information Technology Company providing extensive
+                Digital transformation solutions and Business automation for the
+                public and private sector.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       <div className="absolute right-0">
@@ -102,8 +100,9 @@ const AboutUs = () => {
       <motion.div
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
-        key={4} 
-        className="w-full px-4 items-center lg:m-auto lg:m-0 lg:w-layoutWidth">
+        key={4}
+        className="w-full px-4 items-center lg:m-auto lg:m-0 lg:w-layoutWidth"
+      >
         <section className="flex flex-col justify-center items-center mb-11 lg:mb-24 ">
           <h1 className="text-2xl font-thin tracking-wide leading-relaxed lg:font-bold lg:text-4xl">
             Strategy and design
@@ -142,7 +141,7 @@ const AboutUs = () => {
             key={6}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-           <div>
+            <div>
               <img src={icon6} alt="icon" />
             </div>
             <div>
@@ -157,7 +156,7 @@ const AboutUs = () => {
           </motion.section>
 
           <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
-          <div >
+            <div>
               <img src={icon2} alt="icon" />
             </div>
             <div>
@@ -174,7 +173,7 @@ const AboutUs = () => {
             key={7}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-            <div >
+            <div>
               <img src={icon3} alt="icon" />
             </div>
             <div>
@@ -188,7 +187,7 @@ const AboutUs = () => {
           </motion.section>
 
           <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
-          <div >
+            <div>
               <img src={icon4} alt="icon" />
             </div>
             <div>

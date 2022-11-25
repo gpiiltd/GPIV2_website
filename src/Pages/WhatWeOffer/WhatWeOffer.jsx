@@ -35,7 +35,7 @@ const WhatWeOffer = () => {
         <section className="sm:flex gap-4 pt-8 ">
           <div className="bg-lBrown font-lg text-2xl rounded-2xl relative lg:text-2xl">
             <div
-              className="p-8 flex gap-4  "
+              className="p-8 flex gap-4 md:gap-11 md:w-[400px]"
               onMouseEnter={showDropDown}
               onMouseLeave={HideDropDown}
             >
@@ -57,14 +57,14 @@ const WhatWeOffer = () => {
           </div>
 
           <div className="bg-lblue   font-lg text-2xl rounded-2xl mt-12 sm:mt-0">
-            <div className="p-8 flex gap-4 wrap-no-wrap relative">
+            <div className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]">
               Business Support
               <BsFillCaretDownFill className="mt-2" />
             </div>
           </div>
           <div className="bg-lgray font-lg text-2xl rounded-2xl  mt-12 sm:mt-0">
             <div
-              className="p-6 flex gap-4 wrap-no-wrap relative"
+              className="p-6 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]"
               // onMouseEnter={showDropDown}
               onMouseLeave={HideDropDown}
             >

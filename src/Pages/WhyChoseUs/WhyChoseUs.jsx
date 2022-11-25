@@ -26,8 +26,8 @@ const WhyChoseUs = () => {
       <div className=" flex flex-col lg:flex-row ">
         <section className="  lg:pt-28 lg:mr-24">
           <div className="">
-            <h1 className="text-5xl tracking-wide leading-normal lg:leading-relaxed lg:text-6xl">
-              We promise We deliver
+            <h1 className="text-5xl tracking-wide leading-normal lg:leading-relaxed lg:text-5xl">
+              We promise <br />We deliver
             </h1>
             <button className="hidden border-2 border-green mt-4 py-3 px-8 rounded-xl cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:block">
               <Link
@@ -43,10 +43,10 @@ const WhyChoseUs = () => {
         </section>
         <section className=" flex ">
           <div className="relative">
-            <img src={bimage} alt="..." className=""></img>
+            <img src={bimage} alt="..." className="w-[730px]"></img>
           </div>
           <div className="pt-4 absolute flex gap-4 gap-8 lg:pt-24  lg:pl-0">
-            <div className="px-5 sm:w-64 sm:h-96 bg-black  rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 lg:py-12 ">
+            <div className="px-5 sm:w-64 sm:h-96 bg-black  rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 lg:py-12 lg:ml-28">
               <p>
                 We are skilled professionals that apply our passion for
                 technology to create successfull products and solutions for our
