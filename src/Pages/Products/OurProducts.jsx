@@ -78,7 +78,7 @@ const OurProducts = () => {
         </h1>
 
         <div className=" w-full mt-4 flex justify-center items-center place-items-center gap-y-8 mb-24 bg-green lg:mt-0">
-          <MdOutlineKeyboardArrowLeft onClick={slideLeft} className="text-8xl text-white cursor-pointer  left-0" />
+          <MdOutlineKeyboardArrowLeft onClick={slideRight} className="text-8xl text-white cursor-pointer  left-0" />
 
           <div id="slider" className=" whitespace-nowrap overflow-scroll scroll-smooth place-items-center ">
             {products.map((item, index) => {
@@ -112,7 +112,7 @@ const OurProducts = () => {
               );
             })}
           </div>
-          <MdOutlineKeyboardArrowRight onClick={slideRight}className="text-8xl text-white cursor-pointer" />
+          <MdOutlineKeyboardArrowRight onClick={slideLeft}className="text-8xl text-white cursor-pointer" />
         </div>
         </motion.div>
       
