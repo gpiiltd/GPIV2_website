@@ -54,7 +54,7 @@ const Experience = () => {
           <section className="pt-4 lg:pt-24 md:pl-8">
             <div>
               <div>
-                <h1 className="text-3xl font-bold tracking-wide leading-relaxed md:text-5xl  md:leading-relaxed md:tracking-wide ">
+                <h1 className="font-bold tracking-wide leading-relaxed  text-3xl md:text-5xl  md:leading-relaxed md:tracking-wide ">
                   {currentInfo.Title}
                   <br /> {currentInfo.break}
                 </h1>
