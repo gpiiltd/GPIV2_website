@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/gpi 3.svg";
+import logo from "../Assets/GpiNewLogooo.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 
