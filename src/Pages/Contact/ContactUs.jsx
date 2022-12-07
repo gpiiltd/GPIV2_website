@@ -4,40 +4,7 @@ import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg
 import TextArea from "../../Components/TextArea/TextArea";
 
 const ContactUs = () => {
-  // const [values, setValues] = useState({
-  //   fullName: "",
-  //   email: "",
-  //   number: "",
-  // });
-  // const [success, setsuccess] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   emailjs
-  //     .send("service_37895nb", "template_z7uhva9", values, "9gQTInhcjKsOaQ_Ik")
-  //     .then(
-  //       (response) => {
-  //         console.log("SUCCESS!", response);
-  //         setValues({
-  //           fullName: "",
-  //           email: "",
-  //           number: "",
-  //         });
-  //         setsuccess("SUCCESS");
-  //       },
-  //       (error) => {
-  //         console.log("FAILED...", error);
-  //       }
-  //     );
-  // };
-
-  // useEffect(() => {
-  //   if (success === "SUCCESS") {
-  //     setTimeout(() => {
-  //       setsuccess("");
-  //     }, 3000);
-  //   }
-  // }, [success]);
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
@@ -67,12 +34,7 @@ const ContactUs = () => {
       );
       await response.json();
       console.log("result", response);
-      // if (response.status === 200) {
-      //   setTimeout(() => {
-      //     setSuccessMsg("form submitted successfullt");
-      //    setSuccessMsg("")
-      //   }, 2000);
-      // }
+      
       setUserData({
         ...userData,
         fullName: "",
@@ -136,7 +98,7 @@ const ContactUs = () => {
             />
 
             <button
-              className="border-2 border-green py-2  px-2  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
+              className="border-2 border-green py-2  px-2  cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
               type="submit"
             >
               Submit your Message
@@ -158,9 +120,5 @@ const ContactUs = () => {
     </>
   );
 };
-// const renderAlert = () => (
-//   <div className="px-4 py-3 leading-normal text-green-700  rounded mb-5 text-center ">
-//     <p>Message sent successfully</p>
-//   </div>
-// );
+
 export default ContactUs;
