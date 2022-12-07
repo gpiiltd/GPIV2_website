@@ -4,9 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 import bimage from "../../Components/Assets/Group 1.png";
-// import image1 from "../../Components/Assets/image 9.png";
-// import image2 from "../../Components/Assets/Group 66.png";
-// import image3 from "../../Components/Assets/logo.svg";
+
 
 const WhyChoseUs = () => {
   return (
@@ -26,10 +24,10 @@ const WhyChoseUs = () => {
       <div className=" flex flex-col lg:flex-row ">
         <section className="  lg:pt-28 lg:mr-24">
           <div className="">
-            <h1 className="text-5xl tracking-wide leading-normal lg:leading-relaxed lg:text-5xl">
-              We promise <br />We deliver
+            <h1 className="text-5xl tracking-wide leading-normal lg:leading-tight lg:text-5xl lg:font-bold">
+              WE PROMISE <br />WE DELIVER
             </h1>
-            <button className="hidden border-2 border-green mt-4 py-3 px-8 rounded-xl cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:block">
+            <button className="hidden border-2 border-green mt-4 py-3 px-8 rounded-full cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:block">
               <Link
                 to="contact"
                 smooth={true}
@@ -46,22 +44,19 @@ const WhyChoseUs = () => {
             <img src={bimage} alt="..." className="w-[730px]"></img>
           </div>
           <div className="pt-4 absolute flex gap-4 gap-8 lg:pt-24  lg:pl-0">
-            <div className="px-5 sm:w-64 sm:h-96 bg-black  rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 lg:py-12 lg:ml-28">
+            <div className="px-5 py-5 h-80 bg-black overflow-scroll rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center sm:mt-11 md:h-96 md:w-64 md:overflow-visible lg:py-12 lg:ml-28">
               <p>
-                We are skilled professionals that apply our passion for
-                technology to create successfull products and solutions for our
-                clients
+                GPI is the stop center of solutions that enhances performance, productivity, and integrity through processes founded on universal truths, and professional rules for standardization and sustainable wealth creation
               </p>
             </div>
-            <div className="mr-4 sm:w-64 sm:h-96 bg-homePageCardGreen p-5 rounded-tl-[70px] rounded-br-[70px] grid place-items-center lg:py-12 ">
+            <div className="mr-4 h-80 overflow-scroll bg-homePageCardGreen p-5 rounded-tl-[70px] rounded-br-[70px] grid place-items-center md:h-96 md:w-64 md:overflow-visible lg:py-12 ">
               <p>
-                Our design-focused approach and project execution processes help
-                you to deliver the right solutions at the right time{" "}
+               We are focused on helping businesses in automating their processes exponentially in order to have a system that increases business productivity and ensures data integrity as well as efficient communication. In addition to automation, we manage the overall productivity within your organization
               </p>
             </div>
           </div>
         </section>
-        <button className="block w-[200px] border-2 border-green mt-24 px-4 py-2   rounded-xl cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:hidden lg:px-8 lg:py-3">
+        <button className="block w-[200px] border-2 border-green mt-24 px-4 py-2   rounded-full cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 md:hidden lg:px-8 lg:py-3">
           <Link
             to="contact"
             smooth={true}
