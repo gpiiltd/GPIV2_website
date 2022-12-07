@@ -1,10 +1,11 @@
-import React, { useState} from "react";
-
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg";
+import loaderIcon from "../../Components/Assets/loaderIcon.svg";
 import TextArea from "../../Components/TextArea/TextArea";
 
 const ContactUs = () => {
-
+  const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState({
     fullName: "",
     email: "",
@@ -20,6 +21,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const response = await fetch(
         "https://v1.nocodeapi.com/gpi/google_sheets/NyOmNSHMjYnovYIg?tabId=Sheet1",
         {
@@ -33,22 +35,28 @@ const ContactUs = () => {
         }
       );
       await response.json();
-      console.log("result", response);
-      
-      setUserData({
-        ...userData,
-        fullName: "",
-        email: "",
-        number: "",
-        message: "",
-      });
+
+      setTimeout(() => {
+        setLoading(false);
+        toast.success("Form submitted successfully");
+        setUserData({
+          ...userData,
+          fullName: "",
+          email: "",
+          number: "",
+          message: "",
+        });
+      }, 3000);
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <>
-      <div id="contact" className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600">
+      <div
+        id="contact"
+        className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600"
+      >
         <img
           src={chatBg}
           alt=".."
@@ -56,9 +64,8 @@ const ContactUs = () => {
         ></img>
 
         <div className="flex flex-col-reverse justify-center items-center z-40 p-4  lg:p-11 text-white gap-11 lg:flex-row">
-         
-            {successMsg }
-      
+          {successMsg}
+
           <form
             onSubmit={handleSubmit}
             className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
@@ -98,10 +105,14 @@ const ContactUs = () => {
             />
 
             <button
-              className="border-2 border-green py-2  px-2  cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
+              className="flex flex-col items-center place-items-center border-2 border-green py-2  px-2  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
               type="submit"
             >
-              Submit your Message
+              {loading ? (
+                <img src={loaderIcon} alt="" className="h-6 w-6 " />
+              ) : (
+                <h1 className="">Submit your Message</h1>
+              )}
             </button>
           </form>
           <div className=" z-40  lg:w-2/5">
