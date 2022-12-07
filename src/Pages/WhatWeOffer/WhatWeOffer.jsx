@@ -28,7 +28,7 @@ const WhatWeOffer = () => {
   };
   return (
     <>
-      <div className=" pt-24  w-layoutWidth  m-auto lg:pt-48">
+      <div className=" pt-24  w-layoutWidth  m-auto  lg:pt-48">
         <section className="flex gap-2 lg:gap-11 ">
           <div className="mb-4">
             <h1 className="lg:tracking-wide lg:text-3xl">What we offer</h1>
@@ -36,10 +36,10 @@ const WhatWeOffer = () => {
           <CustomLine />
         </section>
 
-        <section className="sm:flex gap-4 pt-8 ">
-          <div className="bg-lBrown font-lg text-lg rounded-3xl relative lg:text-xl">
+        <section className="flex flex-col  gap-4 pt-8 lg:flex-row">
+          <div className="bg-lBrown font-lg text-lg rounded-3xl relative  lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11 md:w-[400px]"
+              className="p-8 flex gap-4 md:gap-11  md:justify-center md:items-center  lg:justify-start lg:w-[400px] 2xl:w-[350px] "
               onMouseEnter={() => showDropDown("bespoke")}
               onMouseLeave={HideDropDown}
             >
@@ -55,9 +55,9 @@ const WhatWeOffer = () => {
             ) : null}
           </div>
 
-          <div className="bg-lblue font-lg text-lg  rounded-3xl mt-12 sm:mt-0 lg:text-xl">
+          <div className="bg-lblue font-lg text-lg  rounded-3xl mt-12 sm:mt-0  lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px] "
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start lg:w-[400px]  2xl:w-[350px]"
               onMouseEnter={() => showDropDown("small")}
               onMouseLeave={HideDropDown}
             >
@@ -75,7 +75,7 @@ const WhatWeOffer = () => {
           </div>
           <div className="bg-lgray font-lg text-lg  rounded-3xl  mt-12 sm:mt-0 lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]"
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start lg:w-[400px]  2xl:w-[350px]"
               onMouseEnter={() => showDropDown("propriatary")}
               onMouseLeave={HideDropDown}
             >

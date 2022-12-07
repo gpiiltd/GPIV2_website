@@ -36,7 +36,7 @@ const AboutUs = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 1.5 }}
         key={2}
-        className="h-[693px] mt-11 pt-8 py-11 mb-11 bg-[#19683B] px-4 items-center place-items-center grid  lg:grid-cols-2 lg:pl-11"
+        className=" mt-11 pt-8 py-11 mb-11 bg-[#19683B] px-4 items-center place-items-center grid  lg:grid-cols-2 lg:pl-11 lg:h-[693px]"
       >
         <div>
           <img src={aboutImage} alt="aboutImg" className="md:w-[758.39px]" />
@@ -115,7 +115,7 @@ const AboutUs = () => {
           </p>
         </section>
 
-        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 lg:gap-y-2 lg:grid-cols-3">
+        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 md:grid-cols-2 md:gap-x-4 lg:gap-y-2 lg:grid-cols-3 xl:gap-x-8">
           <motion.section
             whileInView={{ y: [20, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}

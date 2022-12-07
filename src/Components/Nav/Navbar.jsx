@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../Assets/gpi 3.svg";
+import logo from "../Assets/GPI logo.png";
 import { Link } from "react-scroll";
 
 
