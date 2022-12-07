@@ -37,18 +37,18 @@ const WhoWeAre = () => {
             />
           </section>
 
-          <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl lg:p-11 lg:h-whoWeAreCardheight lg:w-whoWeAreCardWidth">
+          <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl lg:p-11 lg:h-fit lg:w-whoWeAreCardWidth">
             {/* <div className="bg-homePageCardGreen w-24 h-24 p-2 text-4xl grid place-items-center rounded-full "> */}
             <img src={icon} alt="img" />
             {/* </div> */}
-            <p className="pt-2 text-sm lg:p-4 lg:text-base">
-              We are a degital transformation consultancy and software
-              development
-              <br /> company providing cutting-edge engineering solutions. We
-              proactively
-              <br /> consult, design, develop & scale robust web, mobile &
-              cuustom software <br /> solutions that fuel innovation & deliver
-              digital success!
+            <p className="pt-2 text-sm tracking-wide leading-loose lg:p-2 lg:text-base">
+              Global Performance Index (GPI) is an Indegenous and Innovative Information technology Company
+              Providing Extensive Digital Transformation solutions And Business Automation For The Public And Private Sector
+              <p className="pt-8">To Transform Business And Governance In Africa Through Measurable Improvements In Performance Via Digital Platforms And 
+                Technology. The Global Performance Index International Is Poised To Be The Leading technological Platform For Digital Transformation In Africa.
+                Solving Problems, Enhancing Efficiency And Optimizing Performance.
+
+              </p>
             </p>
           </section>
         </div>

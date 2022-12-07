@@ -3,7 +3,6 @@ import CustomLine from "../../Components/CustomLines/CustomLine";
 import ContactUs from "../Contact/ContactUs";
 import { motion } from "framer-motion";
 import bgImage from "../../Components/Assets/Group 37340.png";
-// import aboutImage2 from "../../Components/Assets/Group 37432.svg";
 
 import icon1 from "../../Components/Assets/Group 37369.png";
 import icon2 from "../../Components/Assets/Group 37371.png";
@@ -13,8 +12,9 @@ import icon5 from "../../Components/Assets/Group 37374.png";
 import icon6 from "../../Components/Assets/Group 37370 (1).png";
 
 import aboutImage from "../../Components/Assets/image 9.svg";
+import aboutImage2 from "../../Components/Assets/Group 37432.svg";
 
-// import image3 from "../../Components/Assets/Mask group.svg";
+
 
 const AboutUs = () => {
   return (
@@ -62,10 +62,12 @@ const AboutUs = () => {
           key={3}
           className="grid place-items-center lg:grid-cols-3"
         >
-          <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
-            {/* <img src={aboutImage2} alt="aboutImg" /> */}
-            {/* <h1 className="text-white text-4xl font-bold">TEAM EFFORT</h1> */}
-          </div>
+          {/* <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
+            
+          </div> */}
+          <div className="w-full h-[430.64px] ">
+            <img src={aboutImage2} alt="..."></img>
+            </div>
           <div className="absolute right-0">
             <img src={bgImage} alt=""></img>
           </div>
@@ -75,18 +77,18 @@ const AboutUs = () => {
             </h1>
             <div className="w-full">
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
-                Global Performance Index (GPI) has become an Automation
-                Solutions Company in cutting edge technology for digital
-                transformation of business in Africa. having recieved the ISO
-                9001 Quality award for performance and productivity. GPI has
-                also been identified by the Nigerian export promotions
-                council(NEPC) As the Nigerian Tech platform advancig
-                opportunities for the Nigerian export frontier.
+                GPI Has Become An Automation
+                Solutions Company In Cutting Edge Technology For Digital
+                Transformation Of Businesses In Africa. Having Recieved The ISO
+                9001 Quality Award For Performance And Productivity, GPI Has
+                Also Been Identified By The Nigerian Export Promotions
+                council(NEPC) As A Nigerian Tech Platform Advancig
+                Opportunities For The Nigerian Export Frontier.
               </p>
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
-                We are an Information Technology Company providing extensive
-                Digital transformation solutions and Business automation for the
-                public and private sector.
+                We Are An Information Technology Company Providing Extensive
+                Digital Transformation Solutions And Business Automate For The
+                Public And Private Sector.
               </p>
             </div>
           </div>
@@ -220,7 +222,7 @@ const AboutUs = () => {
               </p>
             </div>
           </motion.section>
-          {/* </section> */}
+         
         </div>
       </motion.div>
 

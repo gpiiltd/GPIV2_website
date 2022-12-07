@@ -1,26 +1,30 @@
 import CustomLine from "../../Components/CustomLines/CustomLine";
 import React, { useState } from "react";
 
-import { BsFillCaretDownFill } from "react-icons/bs";
-import { FaRegDotCircle } from "react-icons/fa";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const WhatWeOffer = () => {
-  // const texts = [
-  //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  //   "wLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  //   "wLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  //   "wLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  //   "wLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make",
-  // ];
+  const [state, setState] = useState({
+    bespoke: false,
+    small: false,
+    propriatary: false,
+  });
 
-  const [state, setState] = useState(false);
-
-  const showDropDown = () => {
-    setState(true);
+  const showDropDown = (tag) => {
+    const keys = Object.keys(state);
+    let modal = {};
+    keys.forEach((key) => {
+      if (key === tag) {
+        modal[key] = true;
+      } else {
+        modal[key] = false;
+      }
+    });
+    setState(modal);
   };
+
   const HideDropDown = () => {
-    setState(false);
+    setState({ bespoke: false, small: false, propriatary: false });
   };
   return (
     <>
@@ -33,43 +37,58 @@ const WhatWeOffer = () => {
         </section>
 
         <section className="sm:flex gap-4 pt-8 ">
-          <div className="bg-lBrown font-lg text-2xl rounded-2xl relative lg:text-2xl">
+          <div className="bg-lBrown font-lg text-lg rounded-3xl relative lg:text-xl">
             <div
               className="p-8 flex gap-4 md:gap-11 md:w-[400px]"
-              onMouseEnter={showDropDown}
+              onMouseEnter={() => showDropDown("bespoke")}
               onMouseLeave={HideDropDown}
             >
               Bespoke Solutions
-              <BsFillCaretDownFill className="mt-2" />
+              <MdKeyboardArrowDown className="text-green text-2xl" />
             </div>
-            {state ? (
-              <ul className="px-8 bg-lBrown inline-block absolute w-full inset-x-0 pb-8 rounded-xl">
-                <li className="flex gap-2">
-                  <FaRegDotCircle className="mt-1 gap-2" />
-                  Solution 1
-                </li>
-                <li className="flex gap-2">
-                  <FaRegDotCircle className="mt-1 gap-2" />
-                  Solution 2
-                </li>
-              </ul>
+            {state.bespoke ? (
+              <p className="px-8 z-40 bg-lBrown text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
+                With use of software engineering best practices for our
+                development processes, we create bespoke software solutions
+                based on client's needs.
+              </p>
             ) : null}
           </div>
 
-          <div className="bg-lblue   font-lg text-2xl rounded-2xl mt-12 sm:mt-0">
-            <div className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]">
-              Business Support
-              <BsFillCaretDownFill className="mt-2" />
-            </div>
-          </div>
-          <div className="bg-lgray font-lg text-2xl rounded-2xl  mt-12 sm:mt-0">
+          <div className="bg-lblue font-lg text-lg  rounded-3xl mt-12 sm:mt-0 lg:text-xl">
             <div
-              className="p-6 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]"
-              // onMouseEnter={showDropDown}
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px] "
+              onMouseEnter={() => showDropDown("small")}
               onMouseLeave={HideDropDown}
             >
-              Enterprise Solution
-              <BsFillCaretDownFill className="mt-2" />
+              Small Business Solutions
+              <MdKeyboardArrowDown className="text-green text-2xl" />
+              {state.small ? (
+                <p className="px-8 z-40 bg-lblue text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
+                  We provide business automated solutions, using
+                  state-of-the-art technology to enhance the performnce of small
+                  businesses. We lso offer backend services to these small
+                  businesses within our ecosystem
+                </p>
+              ) : null}
+            </div>
+          </div>
+          <div className="bg-lgray font-lg text-lg  rounded-3xl  mt-12 sm:mt-0 lg:text-xl">
+            <div
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative md:w-[400px]"
+              onMouseEnter={() => showDropDown("propriatary")}
+              onMouseLeave={HideDropDown}
+            >
+              Propriatary Solutions
+              <MdKeyboardArrowDown className=" text-green text-2xl" />
+              {state.propriatary ? (
+                <p className="px-8 bg-lgray text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
+                  We have developed our own software solutions in accordance
+                  with ISO 9001 standards. All of these solutions are made to
+                  measure and improve the performance of businesses and
+                  organisations
+                </p>
+              ) : null}
             </div>
           </div>
         </section>
