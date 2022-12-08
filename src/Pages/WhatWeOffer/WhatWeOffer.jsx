@@ -39,7 +39,7 @@ const WhatWeOffer = () => {
         <section className="flex flex-col  gap-4 pt-8 lg:flex-row">
           <div className="bg-lBrown font-lg text-lg rounded-3xl relative  lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11  md:justify-center md:items-center  lg:justify-start lg:w-[400px] 2xl:w-[350px] "
+              className="p-8 flex gap-4 md:gap-11  md:justify-center md:items-center  lg:justify-start xl:w-[400px] 2xl:w-[350px] "
               onMouseEnter={() => showDropDown("bespoke")}
               onMouseLeave={HideDropDown}
             >
@@ -57,7 +57,7 @@ const WhatWeOffer = () => {
 
           <div className="bg-lblue font-lg text-lg  rounded-3xl mt-12 sm:mt-0  lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start lg:w-[400px]  2xl:w-[350px]"
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start xl:w-[400px]  2xl:w-[350px]"
               onMouseEnter={() => showDropDown("small")}
               onMouseLeave={HideDropDown}
             >
@@ -75,7 +75,7 @@ const WhatWeOffer = () => {
           </div>
           <div className="bg-lgray font-lg text-lg  rounded-3xl  mt-12 sm:mt-0 lg:text-xl">
             <div
-              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start lg:w-[400px]  2xl:w-[350px]"
+              className="p-8 flex gap-4 md:gap-11 wrap-no-wrap relative   md:justify-center md:items-center lg:justify-start xl:w-[400px]  2xl:w-[350px]"
               onMouseEnter={() => showDropDown("propriatary")}
               onMouseLeave={HideDropDown}
             >

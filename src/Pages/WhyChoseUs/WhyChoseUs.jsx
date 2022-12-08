@@ -39,7 +39,7 @@ const WhyChoseUs = () => {
             </button>
           </div>
         </section>
-        <section className=" flex justify-center items-center md:items-start md:justify-start ">
+        <section className=" flex justify-center items-center md:items-start md:justify-start lg:justify-center ">
           <div className="relative  ">
             <img src={bimage} alt="..." className="w-[650px] "></img>
           </div>
