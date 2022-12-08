@@ -56,7 +56,6 @@ const ContactUs = () => {
       //   }
       // );
       // await response.json();
-
       // setTimeout(() => {
       //   setLoading(false);
       //   toast.success("Form submitted successfully");
@@ -98,49 +97,46 @@ const ContactUs = () => {
                 className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
               >
                 <div className="flex flex-col lg:gap-8 lg:flex-row">
+                  {/* className=
+                  {`${
+                    errors.email && touched.email ? "border-error " : ""
+                  } rounded-md focus:outline-none focus:border-buyellow focus:ring-1 focus:ring-buyellow bg-white border-bgray py-4 px-4
+              } `} */}
                   <Field
                     value={fullName}
                     onChange={handleChange}
                     name="fullName"
                     type="text"
-                    className="py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 "
+                    className={`${
+                      errors.fullName && touched.fullName
+                        ? "border-red-600 "
+                        : ""
+                    }  py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 }`}
                     placeholder="Name:"
                   />
-                  {errors.fullName && touched.fullName && (
-                    <div className="w-[50%] flex items-start justify-start gap-2 text-warning  text-sm pt-2 pl-10">
-                      {/* <img src={warning} alt="error" /> */}
-                      <ErrorMessage name="fullName" />
-                    </div>
-                  )}
+
                   <Field
                     value={number}
                     onChange={handleChange}
-                    className="py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 "
+                    className={` ${
+                      errors.number && touched.number ? "border-red-600 " : ""
+                    } py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 }`}
                     name="number"
                     type="text"
                     placeholder="Phone:"
                   />
-                  {errors.number && touched.number && (
-                    <div className="w-[50%] flex items-start justify-start gap-2 text-warning  text-sm pt-2 pl-10">
-                      {/* <img src={warning} alt="error" /> */}
-                      <ErrorMessage name="number" />
-                    </div>
-                  )}
                 </div>
                 <Field
                   value={email}
                   onChange={handleChange}
-                  className="py-2 mb-4 text-black placeholder:text-black border-b border-black lg:border-b-2 lg;mb-11 lg:p-4"
+                  className={` ${
+                    errors.email && touched.email ? "border-red-600 " : ""
+                  } py-2 mb-4 text-black placeholder:text-black border-b border-black lg:border-b-2 lg;mb-11 lg:p-4}`}
                   name="email"
                   type="text"
                   placeholder="Email:"
                 />
-                {errors.email && touched.email && (
-                    <div className="w-[50%] flex items-start justify-start gap-2 text-warning  text-sm pt-2 pl-10">
-                      {/* <img src={warning} alt="error" /> */}
-                      <ErrorMessage name="email" />
-                    </div>
-                  )}
+
                 <TextArea
                   name="message"
                   value={message}
