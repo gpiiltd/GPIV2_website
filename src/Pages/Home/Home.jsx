@@ -50,10 +50,10 @@ const Experience = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className="pt-4 w-full px-8 grid place-items-center   lg:px-8 lg:px-0 "
+        className="pt-4 w-full px-8 grid place-items-center  lg:px-8 lg:px-0 "
       >
-        <div className="flex flex-col gap-4 md:flex-row md:gap-24">
-          <section className="pt-4 lg:pt-24 md:pl-8">
+        <div className="flex flex-col gap-4  md:flex-row md:mt-20 md:gap-24 lg:mt-12">
+          <section className="pt-4 lg:pt-24 md:pl-8 ">
             <div>
               <div>
                 <h1 className="font-bold tracking-wide leading-relaxed  text-3xl md:text-5xl  md:leading-relaxed md:tracking-wide ">
@@ -79,10 +79,10 @@ const Experience = () => {
           </section>
           <section className="relative flex ">
             <div className="">
-              <img src={bimage} alt="home img" className="pt-4 md:w-[750px] " />
+              <img src={bimage} alt="home img" className="mt-16  md:pt-4 md:w-[80%%] lg:w-[750px]" />
             </div>
-            <div className="absolute">
-              <img src={homeImg} alt="home img" className="  h-full mt-16  md:mt-0 md:pt-11 md:pl-28" />
+            <div className="absolute ">
+              <img src={homeImg} alt="home img" className="  h-full mt-16 md:w-full   md:mt-10 lg:pt-11 lg:pl-28" />
             </div>
           </section>
           <button className=" block w-[200px] mt-24 border-2 border-green py-3 px-2 rounded-full cursor-pointer bg-green hover:bg-[#19643B]  text-white duration-300 md:hidden md:mt-4 md:px-8">

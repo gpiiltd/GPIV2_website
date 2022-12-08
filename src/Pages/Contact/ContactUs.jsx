@@ -55,12 +55,12 @@ const ContactUs = () => {
     <>
       <div
         id="contact"
-        className="bg-gray-500 relative mt-24 w-full h-full  bg-gradient-to-tl from-gray-600"
+        className="bg-gray-500 relative mt-24 w-full h-full md:w-[100%]  bg-gradient-to-tl from-gray-600"
       >
         <img
           src={chatBg}
           alt=".."
-          className="w-full h-full object-cover mix-blend-overlay absolute bg-black"
+          className="w-full h-full md:w-[100%] object-cover md:space-x-24 mix-blend-overlay absolute bg-black"
         ></img>
 
         <div className="flex flex-col-reverse justify-center items-center z-40 p-4  lg:p-11 text-white gap-11 lg:flex-row">
@@ -70,7 +70,7 @@ const ContactUs = () => {
             onSubmit={handleSubmit}
             className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
           >
-            <div className="flex flex-col lg:gap-8 lg:flex-row">
+            <div className="flex flex-col lg:gap-8 lg:flex-col xl:flex-row">
               <input
                 value={fullName}
                 onChange={handleChange}
@@ -115,8 +115,8 @@ const ContactUs = () => {
               )}
             </button>
           </form>
-          <div className=" z-40  lg:w-2/5">
-            <h1 className="text-3xl  tracking-wide leading-tight font-bold lg:text-5xl">
+          <div className=" z-40 md:w-[100%]  lg:w-2/5">
+            <h1 className="text-3xl  md:[60%]  tracking-wide leading-tight font-bold lg:text-5xl">
               Have a Project? We would love to hear from you
             </h1>
             <p className="pt-2 lg:pt-8">

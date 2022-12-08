@@ -13,7 +13,7 @@ const WhoWeAre = () => {
         key={1}
         className=" pt-24 w-full px-8 grid place-content-center lg:px-0 lg:m-0 lg:m-auto lg:w-layoutWidth "
       >
-        <section className="flex gap-2 lg:gap-11 ">
+        <section className="flex gap-2 md:justify-center lg:gap-11 ">
           <CustomLine />
           <div className="mb-4">
             <h1 className="lg:tracking-wide lg:text-3xl">Who we are</h1>
@@ -29,19 +29,19 @@ const WhoWeAre = () => {
                  </div> 
             </section> */}
 
-          <section className=" hover:ml-8 duration-300">
+          <section className=" hover:ml-8 duration-300 md:flex  md:items-center md:justify-center ">
             <img
               src={image}
               alt="img"
-              className=" hover:rotate-[-12deg] duration-300 lg:w-full"
+              className=" hover:rotate-[-12deg]  duration-300 lg:w-full"
             />
           </section>
 
-          <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl lg:p-11 lg:h-fit lg:w-whoWeAreCardWidth">
+          <section className=" bg-white p-4 shadow overflow-hidden md:w-[80%] md:mx-auto rounded-2xl lg:p-11 lg:h-fit lg:w-whoWeAreCardWidth">
             {/* <div className="bg-homePageCardGreen w-24 h-24 p-2 text-4xl grid place-items-center rounded-full "> */}
-            <img src={icon} alt="img" />
+            <img src={icon} alt="img" className="md:block md:ml-10 lg:block xl:ml-0"/>
             {/* </div> */}
-            <p className="pt-2 text-sm tracking-wide leading-loose lg:p-2 lg:text-base">
+            <p className="pt-2 text-sm tracking-wide leading-loose md:w-[80%] md:mx-auto md:text-justify lg:p-2 lg:text-base">
               Global Performance Index (GPI) is an Indegenous and Innovative Information technology Company
               Providing Extensive Digital Transformation solutions And Business Automation For The Public And Private Sector
               <p className="pt-8">To Transform Business And Governance In Africa Through Measurable Improvements In Performance Via Digital Platforms And 

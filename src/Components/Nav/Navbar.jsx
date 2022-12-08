@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../Assets/gpi 3.svg";
+// import logo from "../Assets/gpi 3.svg";
+import logo from "../Assets/GPI-logo.png";
 import { Link } from "react-scroll";
 
 
@@ -21,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="w-full relative shadow-lg flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
+      <section className="w-full relative shadow-lg flex flex-wrap items-center  justify-between px-2 py-3 bg-white mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className=" ">
@@ -71,12 +72,12 @@ const Navbar = () => {
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center" +
+              "md:w-[100%] lg:w-[80%] lg:flex  flex-grow items-center" +
               (navbarOpen ? " flex pl-4" : " hidden")
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-8">
+            <ul className="flex flex-col md:w-[100%] md:items-center md:justify-center  lg:w-[80%] lg:flex-row lg:justify-end  lg:items-center list-none  lg:ml-auto gap-8">
               <li className="pt-4 cursor-pointer" onClick={homeRoute}>
                 Home
               </li>
@@ -88,7 +89,7 @@ const Navbar = () => {
                 Products
               </li>
              
-              <li className="mr-4 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
+              <li className="mr-4 md:ml-4 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
               <Link
               to="contact"
               smooth={true}

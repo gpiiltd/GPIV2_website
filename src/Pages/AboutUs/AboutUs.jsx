@@ -51,7 +51,7 @@ const AboutUs = () => {
           </p>
         </div>
       </motion.div>
-      <section className="pt-8 py-11  w-full  mb-11 px-4">
+      <section className="pt-8 py-11  w-full md:text-center  mb-11 px-4">
         <h1 className="mb-11  text-4xl tracking-wider leading-relaxed lg:font-bold lg:hidden">
           What GPI is All About
         </h1>
@@ -65,9 +65,9 @@ const AboutUs = () => {
           {/* <div className="w-full h-[430.64px] bg-aboutImage2 bg-no-repeat lg:w-[482px]">
             
           </div> */}
-          <div className="w-full h-[430.64px] ">
+          <div className="flex w-full h-[430.64px] md:justify-center">
             <img src={aboutImage2} alt="..."></img>
-            </div>
+          </div>
           <div className="absolute right-0">
             <img src={bgImage} alt=""></img>
           </div>
@@ -76,7 +76,7 @@ const AboutUs = () => {
               What GPI is all about
             </h1>
             <div className="w-full">
-              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
+              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 md:text-justify lg:pr-11 lg:text-xl">
                 GPI Has Become An Automation
                 Solutions Company In Cutting Edge Technology For Digital
                 Transformation Of Businesses In Africa. Having Recieved The ISO
@@ -85,7 +85,7 @@ const AboutUs = () => {
                 council(NEPC) As A Nigerian Tech Platform Advancig
                 Opportunities For The Nigerian Export Frontier.
               </p>
-              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
+              <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-justify lg:w-[92%]  lg:text-xl">
                 We Are An Information Technology Company Providing Extensive
                 Digital Transformation Solutions And Business Automate For The
                 Public And Private Sector.
@@ -115,18 +115,18 @@ const AboutUs = () => {
           </p>
         </section>
 
-        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 lg:gap-y-2 lg:grid-cols-3">
+        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 lg:gap-y-2 lg:grid-cols-2 xl:grid-cols-3">
           <motion.section
             whileInView={{ y: [20, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
             key={5}
             className=" bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-            <div className=" text-4xl  ">
+            <div className="flex text-4xl md:justify-center  ">
               <img src={icon1} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Software development</h2>
+              <h2 className="py-4 font-bold md:text-center">Software development</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Being a leading software development and IT company, we help you
                 bring your most complex software vision to life with our
@@ -143,11 +143,11 @@ const AboutUs = () => {
             key={6}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-            <div>
+            <div className="flex md:justify-center">
               <img src={icon6} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Business Analytics</h2>
+              <h2 className="py-4 font-bold md:text-center">Business Analytics</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Our business analytics approach empowers you to intelligently
                 aggregate and segment your data so that you can extract
@@ -158,11 +158,11 @@ const AboutUs = () => {
           </motion.section>
 
           <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
-            <div>
+            <div className="flex md:justify-center">
               <img src={icon2} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Business Automation</h2>
+              <h2 className="py-4 font-bold md:text-center">Business Automation</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed  lg:font-light  lg:text-base lg:text-black">
                 Using modern technologies, we build with efficiency and skill,
                 creating flexible and scalable business-driven solutions
@@ -175,11 +175,11 @@ const AboutUs = () => {
             key={7}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-            <div>
+            <div className="flex md:justify-center">
               <img src={icon3} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Performance Management</h2>
+              <h2 className="py-4 font-bold md:text-center">Performance Management</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 We create products and solutions that help team leads, and
                 supervisors assign, measure and review KPIs based on smart
@@ -189,11 +189,11 @@ const AboutUs = () => {
           </motion.section>
 
           <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
-            <div>
+            <div className="flex md:justify-center">
               <img src={icon4} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Design</h2>
+              <h2 className="py-4 font-bold md:text-center">Design</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Our design approach is to simplify. Gaining insights from key
                 stakeholders and the market at large, We embrace the joy of
@@ -209,11 +209,11 @@ const AboutUs = () => {
             key={8}
             className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight"
           >
-            <div>
+            <div className="flex md:justify-center">
               <img src={icon5} alt="icon" />
             </div>
             <div>
-              <h2 className="py-4 font-bold">Training </h2>
+              <h2 className="py-4 font-bold md:text-center">Training </h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 We're equiped with expert knowledge across multiple
                 technological specialisms. We train on industry best practices

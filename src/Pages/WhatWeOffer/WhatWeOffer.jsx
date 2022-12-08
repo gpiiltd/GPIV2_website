@@ -36,7 +36,7 @@ const WhatWeOffer = () => {
           <CustomLine />
         </section>
 
-        <section className="sm:flex gap-4 pt-8 ">
+        <section className="sm:flex gap-4 pt-8 md:flex-wrap md:justify-center lg:justify-start xl:flex-nowrap xl:justify-center ">
           <div className="bg-lBrown font-lg text-lg rounded-3xl relative lg:text-xl">
             <div
               className="p-8 flex gap-4 md:gap-11 md:w-[400px]"
@@ -44,7 +44,7 @@ const WhatWeOffer = () => {
               onMouseLeave={HideDropDown}
             >
               Bespoke Solutions
-              <MdKeyboardArrowDown className="text-green text-2xl" />
+              <MdKeyboardArrowDown className="text-green text-2xl ml-auto" />
             </div>
             {state.bespoke ? (
               <p className="px-8 z-40 bg-lBrown text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
@@ -62,7 +62,7 @@ const WhatWeOffer = () => {
               onMouseLeave={HideDropDown}
             >
               Small Business Solutions
-              <MdKeyboardArrowDown className="text-green text-2xl" />
+              <MdKeyboardArrowDown className="text-green text-2xl ml-auto" />
               {state.small ? (
                 <p className="px-8 z-40 bg-lblue text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
                   We provide business automated solutions, using
@@ -80,7 +80,7 @@ const WhatWeOffer = () => {
               onMouseLeave={HideDropDown}
             >
               Propriatary Solutions
-              <MdKeyboardArrowDown className=" text-green text-2xl" />
+              <MdKeyboardArrowDown className=" text-green text-2xl ml-auto" />
               {state.propriatary ? (
                 <p className="px-8 bg-lgray text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
                   We have developed our own software solutions in accordance

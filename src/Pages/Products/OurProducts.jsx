@@ -84,24 +84,24 @@ const OurProducts = () => {
             {products.map((item, index) => {
               return (
                 <section key={index} className="text-white p-8  gap-8 inline-block">
-                  <div className="flex flex-col gap-8  justify-center items-center lg:flex-row">
-                  <div>
-                    <img src={item.image} alt="product" className="w-[80%] lg:w-full"></img>
+                  <div className="flex flex-col gap-8  justify-center items-center lg:flex-row lg:gap-4 xl:gap-8">
+                  <div className="flex md:justify-center">
+                    <img src={item.image} alt="product" className="w-[80%]  lg:w-full"></img>
                   </div>
-                  <div className=" place-items-center lg:pt-24">
-                    <div className="bg-white text-center text-green w-[240px] ">
+                  <div className=" place-items-center  lg:pt-24 ">
+                    <div className="bg-white text-center text-green w-[240px] md:ml-14">
                       <h1 className="bg-white text-center text-green w-[240px] py-2 ">
                         {item.title}{" "}
                       </h1>
                     </div>
-                    <div>
+                    <div className="flex md:justify-center lg:justify-start ">
                       <h1 className="text-2xl font-bold pt-4">{item.h1}</h1>
                     </div>
 
-                    <p className="pt-4 w-[341px] whitespace-pre-line">{item.desc}</p>
+                    <p className="pt-4 w-[341px] whitespace-pre-line md:ml-8 lg:ml-0 lg:justify-start">{item.desc}</p>
 
-                    <div className="flex gap-2 pt-4">
-                      <a href="#f" className="border-b-2 border-white">
+                    <div className="flex gap-2 pt-4 md:justify-center lg:justify-start">
+                      <a href="#f" className="border-b-2 border-white ">
                         {item.productLink}
                       </a>
                       <MdOutlineKeyboardArrowRight  className="mt-2 text-2xl" />
@@ -121,3 +121,6 @@ const OurProducts = () => {
 };
 
 export default OurProducts;
+
+
+
