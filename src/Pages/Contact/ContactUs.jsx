@@ -63,26 +63,26 @@ const ContactUs = () => {
           className="w-full h-full object-cover mix-blend-overlay absolute bg-black"
         ></img>
 
-        <div className="flex flex-col-reverse justify-center items-center z-40 p-4  lg:p-11 text-white gap-11 lg:flex-row">
+        <div className="flex flex-col-reverse justify-center items-center z-40 p-4  xl:p-11 text-white gap-11 lg:flex-row">
           {successMsg}
 
           <form
             onSubmit={handleSubmit}
             className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
           >
-            <div className="flex flex-col lg:gap-8 lg:flex-row">
+            <div className="flex flex-col  lg:gap-1 lg:flex-col xl:flex-row xl:gap-8">
               <input
                 value={fullName}
                 onChange={handleChange}
                 name="fullName"
                 type="text"
-                className="py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 "
+                className="py-2  text-black placeholder:text-black border-b border-black  lg:mb-11 lg:p-4 xl:w-[226px]"
                 placeholder="Name:"
               />
               <input
                 value={number}
                 onChange={handleChange}
-                className="py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 "
+                className="py-2 text-black placeholder:text-black border-b border-black  lg:mb-11 lg:p-4 xl:w-[201px]"
                 name="number"
                 type="text"
                 placeholder="Phone:"

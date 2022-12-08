@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../Assets/gpi 3.svg";
+import logo from "../Assets/GPI logo.png";
 import { Link } from "react-scroll";
 
 
@@ -21,14 +21,14 @@ const Navbar = () => {
 
   return (
     <>
-      <section className="w-full relative shadow-lg flex flex-wrap items-center justify-between px-2 py-3 bg-white mb-3">
-        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <section className="w-full relative shadow-lg flex flex-wrap items-center justify-around px-2 py-3 bg-white mb-3">
+        <div className="container px-4  flex flex-wrap items-center justify-between lg:px-0  mr-11">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <div className=" ">
               <img
                 src={logo}
                 alt="logo"
-                className="w-24 h-16 cursor-pointer"
+                className=" h-16 cursor-pointer pr-11"
                 onClick={homeRoute}
               ></img>
             </div>
