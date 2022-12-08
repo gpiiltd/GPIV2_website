@@ -50,7 +50,7 @@ const Experience = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className="pt-4 w-full px-8 grid place-items-center md:p-8 lg:px-0 "
+        className="pt-4 w-full  px-8 grid place-items-center md:p-8 lg:px-0 "
       >
         <div className="flex flex-col gap-4 md:flex-row md:gap-48 lg:gap-24">
           <section className="pt-4 lg:pt-24 lg:pl-8">

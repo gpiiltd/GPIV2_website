@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/gpi 3.svg";
+import logo from "../Assets/GPI logo.png";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 
@@ -13,7 +13,7 @@ const Footer = () => {
       <section className="bg-gray-100 px-11 w-full  bg-white   border-lightSilver flex flex-col bottom-0 gap-11">
         <div className="flex flex-col  md:justify-between md:flex-row md:gap-8">
           <div className="flex flex-col  font-light text-xs  leading-relaxed tracking-wide text-gray-600 lg:pl-11">
-            <div className="">
+            <div className="pt-11">
               <img
                 src={logo}
                 alt=".."
@@ -24,14 +24,14 @@ const Footer = () => {
             {/* <ul className="font-light">
               <li>home description</li>
             </ul> */}
-            <p>
+            <p className="pt-4">
               A one step center of solutions that <br /> enhances business
               performance and <br />
               productivity{" "}
             </p>
           </div>
 
-          <div className="flex flex-col gap-11  text-gray-600 py-11 md:flex-row md:pr-28 lg:gap-24">
+          <div className="flex flex-col gap-11  text-gray-600 py-11 md:flex-row lg:pr-28 lg:gap-24">
             <div className="flex flex-col gap-2 ">
               <div className="text-xlg font-light">Contact</div>
               <ul className="font-light text-xs  leading-loose tracking-wider">

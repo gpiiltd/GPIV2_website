@@ -115,7 +115,7 @@ const AboutUs = () => {
           </p>
         </section>
 
-        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 md:grid-cols-2 md:gap-x-4 lg:gap-y-2 lg:grid-cols-3 xl:gap-x-8">
+        <div className=" grid gap-y-8 place-items-center gap-x-0 mb-24 lg:grid-cols-2 md:gap-x-4 lg:gap-y-2 xl:grid-cols-3 xl:gap-x-8">
           <motion.section
             whileInView={{ y: [20, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
