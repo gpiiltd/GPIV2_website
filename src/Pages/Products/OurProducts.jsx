@@ -14,14 +14,14 @@ const OurProducts = () => {
       title: "user Management",
       image: image1,
       h1: "Lagos ideation innovate",
-      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      desc: "We are a digital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & custom software solutions that fuel innovation & deliver digital success!",
       productLink: "visit website",
     },
     {
       title: "Card Management",
       image: image2,
       h1: "Providus Bank ",
-      desc: "We are a degital transformation consultancy and software development company providing cutting-edge engineering solutions.We proactively consult, design, develop & scale robust web, mobile & cuustom software solutions that fuel innovation & deliver digital success!",
+      desc: "Providus Bank Card Personalisation software allows internal users (CSOs) personalise and print on debit cards for customers while updating the debit card status as well as other relevant records on the ViaCard application and in turn the core banking application.",
       productLink: "visit website",
     },
     {

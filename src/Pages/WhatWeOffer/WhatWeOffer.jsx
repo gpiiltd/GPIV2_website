@@ -48,7 +48,7 @@ const WhatWeOffer = () => {
             </div>
             {state.bespoke ? (
               <p className="px-8 z-40 bg-lBrown text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
-                With use of software engineering best practices for our
+                With the use of software engineering best practices for our
                 development processes, we create bespoke software solutions
                 based on client's needs.
               </p>
@@ -67,8 +67,8 @@ const WhatWeOffer = () => {
                 <p className="px-8 z-40 bg-lblue text-sm leading-loose tracking-wide absolute  inset-x-0 pb-8 top-16 pt-4 rounded-b-3xl">
                   We provide business automated solutions, using
                   state-of-the-art technology to enhance the performnce of small
-                  businesses. We lso offer backend services to these small
-                  businesses within our ecosystem
+                  businesses. We also offer backend services to these small
+                  businesses within our ecosystem.
                 </p>
               ) : null}
             </div>
@@ -86,7 +86,7 @@ const WhatWeOffer = () => {
                   We have developed our own software solutions in accordance
                   with ISO 9001 standards. All of these solutions are made to
                   measure and improve the performance of businesses and
-                  organisations
+                  organisations.
                 </p>
               ) : null}
             </div>

@@ -79,10 +79,10 @@ const AboutUs = () => {
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
                 GPI Has Become An Automation
                 Solutions Company In Cutting Edge Technology For Digital
-                Transformation Of Businesses In Africa. Having Recieved The ISO
+                Transformation Of Businesses In Africa. Having Received The ISO
                 9001 Quality Award For Performance And Productivity, GPI Has
                 Also Been Identified By The Nigerian Export Promotions
-                council(NEPC) As A Nigerian Tech Platform Advancig
+                Council(NEPC) As A Nigerian Tech Platform Advancig
                 Opportunities For The Nigerian Export Frontier.
               </p>
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
