@@ -4,26 +4,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg";
 import loaderIcon from "../../Components/Assets/loaderIcon.svg";
+import warning from "../../Components/Assets/warning.svg";
 import TextArea from "../../Components/TextArea/TextArea";
-
-const initialValues = {
-  fullName: "",
-  email: "",
-  number: "",
-  message: "",
-};
-
-const validationSchema = Yup.object().shape({
-  fullName: Yup.string().required("This field is required!"),
-  number: Yup.string().required("This field is required!"),
-  email: Yup.string()
-    .trim()
-    .required("Email can not be empty")
-    .email("This can’t be right. Email Invalid"),
-  message: Yup.string()
-    .required("Password can not be empty")
-    .min(20, "Password must not exceed 20 characters"),
-});
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
@@ -36,37 +18,62 @@ const ContactUs = () => {
   const [successMsg, setSuccessMsg] = useState("");
   const { fullName, email, number, message } = userData;
 
+  const initialValues = {
+    fullName: "",
+    email: "",
+    number: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object().shape({
+    fullName: Yup.string().required("This field is required!"),
+    number: Yup.string().required("This field is required!"),
+    email: Yup.string()
+      .trim()
+      .required("Email can not be empty")
+      .email("This can’t be right. Email Invalid"),
+    message: Yup.string()
+      .required("message can not be empty")
+      .min(10, "message must be at least 10 characters"),
+  });
   const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (data) => {
+    const fullName = data.fullName;
+    const number = data.number;
+    const email = data.email;
+    const message = data.message;
+
     try {
-      // setLoading(true);
-      // const response = await fetch(
-      //   "https://v1.nocodeapi.com/gpi/google_sheets/NyOmNSHMjYnovYIg?tabId=Sheet1",
-      //   {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify([
-      //       [fullName, email, number, message, new Date().toLocaleDateString()],
-      //     ]),
-      //   }
-      // );
-      // await response.json();
-      // setTimeout(() => {
-      //   setLoading(false);
-      //   toast.success("Form submitted successfully");
-      //   setUserData({
-      //     ...userData,
-      //     fullName: "",
-      //     email: "",
-      //     number: "",
-      //     message: "",
-      //   });
-      // }, 3000);
+      setLoading(true);
+      console.log("Form submitted successfully");
+      const response = await fetch(
+        "https://v1.nocodeapi.com/gpi/google_sheets/NyOmNSHMjYnovYIg?tabId=Sheet1",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify([
+            [fullName, email, number, message, new Date().toLocaleDateString()],
+          ]),
+        }
+      );
+
+      await response.json();
+
+      setTimeout(() => {
+        setLoading(false);
+        toast.success("Form submitted successfully");
+        setUserData({
+          ...userData,
+          fullName: "",
+          email: "",
+          number: "",
+          message: "",
+        });
+      }, 3000);
     } catch (error) {
       console.log(error);
     }
@@ -88,66 +95,105 @@ const ContactUs = () => {
 
           <Formik
             initialValues={initialValues}
+            enableReinitialze={true}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
             {({ errors, touched }) => (
-              <Form
-                // onSubmit={handleSubmit}
-                className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 "
-              >
+              <Form className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 ">
                 <div className="flex flex-col lg:gap-8 lg:flex-row">
-                  {/* className=
-                  {`${
-                    errors.email && touched.email ? "border-error " : ""
-                  } rounded-md focus:outline-none focus:border-buyellow focus:ring-1 focus:ring-buyellow bg-white border-bgray py-4 px-4
-              } `} */}
-                  <Field
-                    value={fullName}
-                    onChange={handleChange}
-                    name="fullName"
-                    type="text"
-                    className={`${
-                      errors.fullName && touched.fullName
-                        ? "border-red-600 "
-                        : ""
-                    }  py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 }`}
-                    placeholder="Name:"
-                  />
+                  <div className="">
+                    <Field
+                      name="fullName"
+                      type="text"
+                      placeholder="Name/Company Name:"
+                      className={`${
+                        errors.fullName && touched.fullName
+                          ? "border-red-600 lg:mb-4"
+                          : ""
+                      } w-full py-2  text-black placeholder:text-black border-b border-black lg:w-[226px] lg:mb-11 lg:p-4 }`}
+                    />
+                    {errors.fullName && touched.fullName && (
+                      <div className="flex items-center text-red-600 ml-2 text-sm ">
+                        <img src={warning} alt="" className="w-4" />
+                        <ErrorMessage
+                          name="fullName"
+                          component="div"
+                          className="ml-2"
+                        />
+                      </div>
+                    )}{" "}
+                  </div>
 
-                  <Field
-                    value={number}
-                    onChange={handleChange}
-                    className={` ${
-                      errors.number && touched.number ? "border-red-600 " : ""
-                    } py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 }`}
-                    name="number"
-                    type="text"
-                    placeholder="Phone:"
-                  />
+                  <div className="">
+                    <Field
+                      name="number"
+                      type="text"
+                      placeholder="Phone:"
+                      className={`${
+                        errors.number && touched.number
+                          ? "border-red-600 lg:mb-4"
+                          : ""
+                      } w-full py-2 text-black placeholder:text-black border-b border-black lg:w-[201px] lg:mb-11 lg:p-4 }`}
+                    />
+                    {errors.number && touched.number && (
+                      <div className="flex items-center text-red-600 ml-2 text-sm ">
+                        <img src={warning} alt="" className="w-4" />
+                        <ErrorMessage
+                          name="number"
+                          component="div"
+                          className="ml-2"
+                        />
+                      </div>
+                    )}{" "}
+                  </div>
                 </div>
                 <Field
-                  value={email}
-                  onChange={handleChange}
-                  className={` ${
-                    errors.email && touched.email ? "border-red-600 " : ""
-                  } py-2 mb-4 text-black placeholder:text-black border-b border-black lg:border-b-2 lg;mb-11 lg:p-4}`}
                   name="email"
                   type="text"
                   placeholder="Email:"
+                  className={`${
+                    errors.email && touched.email
+                      ? "border-red-600 lg:mb-2"
+                      : ""
+                  } py-2 mb-4 text-black placeholder:text-black border-b border-black lg:border-b-2 lg:mb-11 lg:p-4}`}
                 />
-
-                <TextArea
+                {errors.email && touched.email && (
+                  <div className="flex items-center text-red-600 ml-2 text-sm mb-4">
+                    <img src={warning} alt="" className="w-4" />
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="ml-2"
+                    />
+                  </div>
+                )}{" "}
+                <Field
                   name="message"
-                  value={message}
-                  handleChange={handleChange}
+                  component="textarea"
+                  rows="4"
+                  cols="55"
+                  type="text"
                   placeholder="Please drop a message"
-                  className="text-black"
+                  className={`${
+                    errors.message && touched.message
+                      ? "border-red-600 lg:mb-2"
+                      : ""
+                  } p-2 mb-2 border-b-2 border-2 text-black placeholder:text-black w-full outline-none  lg:mb-11}`}
                 />
-
+                {errors.message && touched.message && (
+                  <div className="flex items-center text-red-600 ml-2 text-sm mb-4">
+                    <img src={warning} alt="" className="w-4" />
+                    <ErrorMessage
+                      name="message"
+                      component="div"
+                      className="ml-2"
+                    />
+                  </div>
+                )}
                 <button
-                  className="flex flex-col items-center place-items-center border-2 border-green py-2  px-2  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
                   type="submit"
+                  className="flex flex-col items-center place-items-center border-2 border-green py-2 mt-4 px-2  rounded-lg cursor-pointer bg-green hover:bg-transparent hover:text-black text-white duration-300 lg:py-3 lg:px-2"
                 >
                   {loading ? (
                     <img src={loaderIcon} alt="" className="h-6 w-6 " />
