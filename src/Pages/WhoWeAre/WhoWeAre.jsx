@@ -19,15 +19,8 @@ const WhoWeAre = () => {
             <h1 className="lg:tracking-wide lg:text-3xl">Who we are</h1>
           </div>
         </section>
-        <div className="flex flex-col gap-8 pt-8 lg:flex-row lg:gap-24">
-          {/* <section className=" bg-black w-[340px] h-[374px] rounded-2xl hover:ml-11 hover:h-[390px] duration-300"> */}
-          {/* <div className="w-full h-vh relative">
-                 <img src={homeImg3} alt="..." className=" duration-300 relative" /> 
-                 </div>  */}
-          {/* <div className="w-full h-vh ">
-                 <img src={homeImg2} alt="..." className=" duration-300 " /> 
-                 </div> 
-            </section> */}
+        <div className="flex flex-col gap-8 pt-8 lg:flex-row md:gap-11 lg:gap-24">
+          
 
           <section className=" hover:ml-8 duration-300">
             <img
@@ -37,10 +30,9 @@ const WhoWeAre = () => {
             />
           </section>
 
-          <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl lg:p-11 lg:h-fit lg:w-whoWeAreCardWidth">
-            {/* <div className="bg-homePageCardGreen w-24 h-24 p-2 text-4xl grid place-items-center rounded-full "> */}
+          <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl md:p-11 md:h-fit md:w-whoWeAreCardWidth">
             <img src={icon} alt="img" />
-            {/* </div> */}
+           
             <p className="pt-2 text-sm tracking-wide leading-loose lg:p-2 lg:text-base">
               Global Performance Index (GPI) is an Indegenous and Innovative Information technology Company
               Providing Extensive Digital Transformation solutions And Business Automation For The Public And Private Sector

@@ -80,7 +80,7 @@ const OurProducts = () => {
         <div className=" w-full mt-4 flex justify-center items-center place-items-center gap-y-8 mb-24 bg-green lg:mt-0">
           <MdOutlineKeyboardArrowLeft onClick={slideRight} className="text-8xl text-white cursor-pointer  left-0" />
 
-          <div id="slider" className=" whitespace-nowrap overflow-scroll scroll-smooth place-items-center ">
+          <div id="slider" className=" whitespace-nowrap overflow-scroll scrollbar-hide scroll-smooth place-items-center ">
             {products.map((item, index) => {
               return (
                 <section key={index} className="text-white p-8  gap-8 inline-block">
