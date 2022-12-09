@@ -46,10 +46,10 @@ const WhyChoseUs = () => {
           <div className="pt-4 absolute  flex gap-4  justify-center items-center md:gap-8 md:justify-start  lg:pt-0 lg:gap-4 lg:pl-0">
             <div className="py-11 w-40 px-5 h-80  overflow-scroll scrollbar-hide bg-black rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center mt-24 md:h-96 md:w-64 md:overflow-visible lg:py-12 lg:ml-28">
               <p>
-                GPI is the stop center of solutions that enhances performance,
+                GPI is the one stop center of solutions that enhances performance,
                 productivity, and integrity through processes founded on
                 universal truths, and professional rules for standardization and
-                sustainable wealth creation
+                sustainable wealth creation.
               </p>
             </div>
             <div className="py-11 w-40 px-5 h-80  overflow-scroll scrollbar-hide bg-homePageCardGreen  rounded-tl-[70px] rounded-br-[70px] grid place-items-center  md:h-96 md:w-64 md:overflow-visible lg:py-12 ">
@@ -58,7 +58,7 @@ const WhyChoseUs = () => {
                 processes exponentially in order to have a system that increases
                 business productivity and ensures data integrity as well as
                 efficient communication. In addition to automation, we manage
-                the overall productivity within your organization
+                the overall productivity within your organization.
               </p>
             </div>
           </div>

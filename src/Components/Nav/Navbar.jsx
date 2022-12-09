@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import logo from "../Assets/GPI logo.png";
 import { Link } from "react-scroll";
 
-
 const Navbar = () => {
   let navigate = useNavigate();
 
@@ -76,7 +75,7 @@ const Navbar = () => {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-8">
+            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto lg:gap-8">
               <li className="pt-4 cursor-pointer" onClick={homeRoute}>
                 Home
               </li>
@@ -87,16 +86,16 @@ const Navbar = () => {
               <li className="pt-4 cursor-pointer" onClick={pathChange}>
                 Products
               </li>
-             
-              <li className="mr-4 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
-              <Link
-              to="contact"
-              smooth={true}
-              duration={700}
-              className="cursor-pointer"
-            >
-              Get in touch
-            </Link>
+
+              <li className="mr-2 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={700}
+                  className="cursor-pointer"
+                >
+                  Get in touch
+                </Link>
               </li>
             </ul>
           </div>
