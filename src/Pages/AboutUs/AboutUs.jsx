@@ -46,7 +46,7 @@ const AboutUs = () => {
             We Assured,We Deliver.Team Effort
           </h1>
           <p className="pt-4 font-light  text-gray-200 tracking-wide lg:text-2xl  lg:font-thin">
-            We have submitted projects to variuos clients and we receive great
+            We have submitted projects to various clients and we received great
             reviews
           </p>
         </div>
