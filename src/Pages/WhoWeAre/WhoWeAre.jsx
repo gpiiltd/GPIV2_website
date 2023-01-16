@@ -20,8 +20,6 @@ const WhoWeAre = () => {
           </div>
         </section>
         <div className="flex flex-col gap-8 pt-8 lg:flex-row md:gap-11 lg:gap-24">
-          
-
           <section className=" hover:ml-8 duration-300">
             <img
               src={image}
@@ -32,14 +30,19 @@ const WhoWeAre = () => {
 
           <section className=" bg-white p-4 shadow overflow-hidden rounded-2xl md:p-11 md:h-fit md:w-whoWeAreCardWidth">
             <img src={icon} alt="img" />
-           
-            <p className="pt-2 text-sm tracking-wide leading-loose lg:p-2 lg:text-base">
-              Global Performance Index (GPI) Is An Indegenous And Innovative Information Technology Company
-              Providing Extensive Digital Transformation Solutions And Business Automation For The Public And Private Sector
-              <p className="pt-8">To Transform Business And Governance In Africa Through Measurable Improvements In Performance Via Digital Platforms And 
-                Technology. The Global Performance Index International Is Poised To Be The Leading Technological Platform For Digital Transformation In Africa.
-                Solving Problems, Enhancing Efficiency And Optimizing Performance.
 
+            <p className="pt-2 text-sm tracking-wide leading-loose lg:p-2 lg:text-base">
+              Global Performance Index (GPI) is an indigenous and innovative
+              information technology company providing extensive digital
+              transformation solutions and business automation for the public
+              and private sector.
+              <p className="pt-8">
+                To transform business and governance in Africa through
+                measurable improvements in performance via digital platforms and
+                technology. The Global Performance Index International is poised
+                to be the leading technological platform for digital
+                transformation in Africa. Solving problems, enhancing
+                efficiency, optimizing performance
               </p>
             </p>
           </section>
