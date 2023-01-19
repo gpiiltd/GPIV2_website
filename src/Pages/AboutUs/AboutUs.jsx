@@ -14,8 +14,6 @@ import icon6 from "../../Components/Assets/Group 37370 (1).png";
 import aboutImage from "../../Components/Assets/image 9.svg";
 import aboutImage2 from "../../Components/Assets/Group 37432.svg";
 
-
-
 const AboutUs = () => {
   return (
     <>
@@ -46,7 +44,7 @@ const AboutUs = () => {
             We Assured,We Deliver.Team Effort
           </h1>
           <p className="pt-4 font-light  text-gray-200 tracking-wide lg:text-2xl  lg:font-thin">
-            We have submitted projects to variuos clients and we receive great
+            We have submitted projects to various clients and we received great
             reviews
           </p>
         </div>
@@ -67,7 +65,7 @@ const AboutUs = () => {
           </div> */}
           <div className="w-full h-[430.64px] ">
             <img src={aboutImage2} alt="..."></img>
-            </div>
+          </div>
           <div className="absolute right-0">
             <img src={bgImage} alt=""></img>
           </div>
@@ -77,18 +75,17 @@ const AboutUs = () => {
             </h1>
             <div className="w-full">
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:pr-11 lg:text-xl">
-                GPI Has Become An Automation
-                Solutions Company In Cutting Edge Technology For Digital
-                Transformation Of Businesses In Africa. Having Received The ISO
-                9001 Quality Award For Performance And Productivity, GPI Has
-                Also Been Identified By The Nigerian Export Promotions
-                Council(NEPC) As A Nigerian Tech Platform Advancig
-                Opportunities For The Nigerian Export Frontier.
+                GPI has become an automation solutions company in cutting edge
+                technology for digital transformation of businesses in Africa.
+                Having received the ISO 9001 quality award for performance and
+                productivity, GPI has also been identified by the Nigerian
+                Export Promotion Council (NEPC) as a Nigerian Tech Platform
+                advancing opportunities for the Nigerian export frontier.
               </p>
               <p className="pt-8 text-xs tracking-wide leading-loose text-gray-500 lg:text-xl">
-                We Are An Information Technology Company Providing Extensive
-                Digital Transformation Solutions And Business Automate For The
-                Public And Private Sector.
+                We are an information tecnology company providing extensive
+                digital transformation solutions and business automate for the
+                public and private sector.
               </p>
             </div>
           </div>
@@ -111,7 +108,7 @@ const AboutUs = () => {
           </h1>
           <p className="text-xs tracking-wide  px-4 text-gray-600 text-center pt-4 font-thin lg:font-light lg:text-2xl">
             Our in-house business cunsultants and stragtegists has garnered the
-            experiencento help you launch your ninnovative digital product
+            experiencento help you launch your innovative digital product
           </p>
         </section>
 
@@ -128,11 +125,11 @@ const AboutUs = () => {
             <div>
               <h2 className="py-4 font-bold">Software development</h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
-                Being a leading software development and IT company, we help you
-                bring your most complex software vision to life with our
-                leadding full-cycle custom application development service. So
+                Being a leading software development and IT company, we’ll help
+                you bring your most complex software vision to life with our
+                leading full-cycle custom application development service. So
                 you can focus on delivering an incredible user experience that
-                sets you apart from the competition
+                sets you apart from the competition.
               </p>
             </div>
           </motion.section>
@@ -197,8 +194,8 @@ const AboutUs = () => {
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 Our design approach is to simplify. Gaining insights from key
                 stakeholders and the market at large, We embrace the joy of
-                creating something unique that is easy for end users. So you can
-                market your idea with confidence
+                creating something unique that is easy for end users. so you can
+                market your idea with confidence.
               </p>
             </div>
           </section>
@@ -215,14 +212,13 @@ const AboutUs = () => {
             <div>
               <h2 className="py-4 font-bold">Training </h2>
               <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
-                We're equiped with expert knowledge across multiple
+                We’re equipped with expert knowledge across multiple
                 technological specialisms. We train on industry best practices
                 to help your business grow and utilize the ease that technology
                 brings.
               </p>
             </div>
           </motion.section>
-         
         </div>
       </motion.div>
 
