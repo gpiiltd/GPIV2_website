@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import chatBg from "../../Components/Assets/trabajoequipoteam-4200837_1920 3.svg";
 import loaderIcon from "../../Components/Assets/loaderIcon.svg";
 import warning from "../../Components/Assets/warning.svg";
-import TextArea from "../../Components/TextArea/TextArea";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
@@ -15,8 +14,7 @@ const ContactUs = () => {
     number: "",
     message: "",
   });
-  const [successMsg, setSuccessMsg] = useState("");
-  const { fullName, email, number, message } = userData;
+  const [successMsg] = useState("");
 
   const initialValues = {
     fullName: "",
@@ -36,9 +34,7 @@ const ContactUs = () => {
       .required("message can not be empty")
       .min(10, "message must be at least 10 characters"),
   });
-  const handleChange = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value });
-  };
+
   const handleSubmit = async (data) => {
     const fullName = data.fullName;
     const number = data.number;
@@ -100,7 +96,7 @@ const ContactUs = () => {
             onSubmit={handleSubmit}
           >
             {({ errors, touched }) => (
-              <Form className="w-[353px] z-40 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 ">
+              <Form className="w-[353px] z-20 flex flex-col bg-white p-8  lg:p-11 lg:w-2/5 ">
                 <div className="flex flex-col lg:gap-8 lg:flex-row">
                   <div className="">
                     <Field
@@ -204,7 +200,7 @@ const ContactUs = () => {
               </Form>
             )}
           </Formik>
-          <div className=" z-40  lg:w-2/5">
+          <div className="   lg:w-2/5">
             <h1 className="text-3xl  tracking-wide leading-tight font-bold lg:text-5xl">
               Have a Project? We would love to hear from you
             </h1>

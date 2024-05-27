@@ -1,39 +1,55 @@
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../Assets/GPI logo.png";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
   let navigate = useNavigate();
-
-  const routeChange = () => {
-    navigate("/aboutus");
-  };
-  const pathChange = () => {
-    navigate("/products");
-  };
-  const homeRoute = () => {
-    navigate("/");
-  };
-
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    setIsMediumScreen(mediaQuery.matches);
+  
+    const handleMediaChange = (e) => {
+      setIsMediumScreen(e.matches);
+      if (e.matches) {
+        setNavbarOpen(false);  
+      }
+    };
+  
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
+
+  const mobileNav = navbarOpen && !isMediumScreen
+  ? 'flex pl-1 absolute bg-white mt-44 right-0 shadow-lg pl-4 z-40 justify-center items-center rounded'
+  : 'hidden';
 
   return (
     <>
-      <section className="w-full relative shadow-lg flex flex-wrap items-center justify-around px-2 py-3 bg-white mb-3">
-        <div className="container px-4  flex flex-wrap items-center justify-between lg:px-0  mr-11">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <div className=" ">
-              <img
-                src={logo}
-                alt="logo"
-                className=" h-16 cursor-pointer pr-11"
-                onClick={homeRoute}
-              ></img>
-            </div>
-
+      <section className="w-full px-4 fixed z-40 shadow-lg flex justify-between  items-center py-2 md:py-3 bg-white  md:px-8 ">
+        <img
+          src={logo}
+          alt="logo"
+          className="hidden cursor-pointer md:block"
+          onClick={()=>navigate("/")}
+        ></img>
+        <div className="relative flex justify-between items-center w-full md:hidden ">
+          <div>
+            <img
+              src={logo}
+              alt="logo"
+              className="cursor-pointer"
+              onClick={()=>navigate("/")}
+            ></img>
+          </div>
+          <div>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="text-white cursor-pointer text-xl leading-none py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -68,37 +84,38 @@ const Navbar = () => {
               )}
             </button>
           </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex pl-4" : " hidden")
-            }
-            id="example-navbar-danger"
-          >
-            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto lg:gap-8">
-              <li className="pt-4 cursor-pointer" onClick={homeRoute}>
-                Home
-              </li>
+        </div>
+        <div
+        className={`${mobileNav} md:flex md:relative md:bg-transparent md:mt-0 md:right-0 md:shadow-none md:pl-0 md:z-auto md:justify-center md:items-center`}
+        id="example-navbar-danger"
+        >
+          <ul className="flex flex-col gap-1 items-center justify-center py-3 list-none md:flex-row  md:gap-8 md:pt-0">
+            <li
+              className="pt-1 cursor-pointer text-xs md:text-sm lg:text-base "
+              onClick={() => navigate("/")}
+            >
+              Home
+            </li>
 
-              <li className="pt-4 cursor-pointer" onClick={routeChange}>
-                About us
-              </li>
-              <li className="pt-4 cursor-pointer" onClick={pathChange}>
-                Products
-              </li>
+            <li
+              className="pt-1 cursor-pointer text-xs md:text-sm lg:text-base "
+              onClick={()=>navigate("/aboutus")}
+            >
+              About us
+            </li>
+            <li
+              className="pt-1 cursor-pointer text-xs md:text-sm lg:text-base "
+              onClick={()=>navigate("/products")}
+            >
+              Products
+            </li>
 
-              <li className="mr-2 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={700}
-                  className="cursor-pointer"
-                >
-                  Get in touch
-                </Link>
-              </li>
-            </ul>
-          </div>
+            <li className="mt-1 mr-2 cursor-pointer  text-xs md:text-sm lg:text-base border border-green hover:bg-green hover:text-white duration-300 py-1  px-2 lg:px-4 rounded-full cursor-pointer md:mr-0 md:mt-0">
+              <Link to="contact" smooth={true} duration={700}>
+                Get in touch
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
     </>

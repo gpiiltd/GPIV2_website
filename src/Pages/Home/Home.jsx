@@ -50,19 +50,19 @@ const Experience = () => {
         whileInView={{ y: [20, 0], opacity: [0, 1] }}
         transition={{ duration: 0.9 }}
         key={1}
-        className="pt-4 w-full  px-8 grid place-items-center md:p-8 lg:px-0 "
+        className="pt-4 w-full px-4 grid place-items-center md:p-8 lg:px-0 "
       >
         <div className="flex flex-col gap-4 md:flex-row md:gap-48 lg:gap-24">
-          <section className="pt-4 lg:pt-24 lg:pl-8">
+          <section className="pt-16 lg:pt-24 lg:pl-8 w-full  md:w-[40%]">
             <div>
               <div>
-                <h1 className="font-bold tracking-wide leading-relaxed text-3xl lg:text-5xl  lg:leading-relaxed lg:tracking-wide ">
+                <h1 className="font-bold tracking-wide  text-2xl lg:text-5xl  lg:leading-relaxed lg:tracking-wide ">
                   {currentInfo.Title}
-                  <br /> {currentInfo.break}
+                 {currentInfo.break}
                 </h1>
-                <p className="absolute text-xs text-gray-600 pt-4 font-light lg:text-base lg:relative">
+                <p className="absolute text-xs text-gray-600 pt-2 font-light lg:text-base lg:relative">
                   {currentInfo.Description}
-                  <br /> {currentInfo.DescriptionBreak}
+                 {currentInfo.DescriptionBreak}
                 </p>
               </div>
 
