@@ -42,9 +42,6 @@ const Experience = () => {
       }`
       )
       .then((data) => {
-        // console.log("Fresh Hero Data:", data);
-        // console.log("Hero Image Data:", data?.heroSectionImageMain);
-        // console.log("Hero Image URL:", data?.heroSectionImageMain?.asset?.url);
         setHeroData(data);
       })
       .catch(console.error);
