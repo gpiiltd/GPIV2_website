@@ -15,7 +15,11 @@ const HomePageContents = () => {
     client
       .fetch(
         `*[_type == "heroSection"][0]{
-          whoAreWeImageMain,
+          whoAreWeImageMain {
+            asset->{
+              url
+            }
+          },
           whoAreWeParagraphOne,
           whoAreWeParagraphTwo,
           bespokeSolutions,
