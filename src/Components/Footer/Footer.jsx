@@ -58,10 +58,10 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-11 text-gray-600 py-11 md:flex-row lg:pr-28 lg:gap-24">
-            <div className="flex flex-col gap-2">
+            {/* Contact Section */}
+            <div className="flex flex-col gap-2 md:flex-1 md:min-w-0">
               <div className="text-xlg font-light">Contact</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
-                {/* Use number and address from Sanity */}
                 <li>{footerData.number || "08055343001"}</li>
                 <li>
                   {footerData.address ||
@@ -69,16 +69,19 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+
+            {/* Our Products Section */}
+            <div className="flex flex-col gap-4 md:flex-1 md:min-w-0">
               <div className="text-xlg font-light">Our Products</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
-                {/* Map over listProduct from Sanity */}
                 {footerData.listProduct?.map((product, index) => (
                   <li key={index}>{product}</li>
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col gap-4">
+
+            {/* Get Started Section */}
+            <div className="flex flex-col gap-4 md:flex-1 md:min-w-0">
               <div className="text-xlg font-light">Get Started</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
                 <li className="cursor-pointer">

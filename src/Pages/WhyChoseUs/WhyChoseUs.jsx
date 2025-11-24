@@ -11,11 +11,15 @@ const WhyChoseUs = ({ whyChooseuseOne, whyChooseuseTwo }) => {
       whileInView={{ y: [20, 0], opacity: [0, 1] }}
       transition={{ duration: 1.5 }}
       key={1}
-      className="pt-24 h-full w-full  place-items-center md:px-0 md:pt-48 md:w-layoutWidth md:m-auto"
+      className="pt-24 h-full w-full place-items-center md:px-0 md:pt-48 md:w-layoutWidth md:m-auto"
     >
-      <section className="flex gap-2 lg:gap-11 px-8">
-        <CustomLine />
-        <div className="mb-4">
+      <section className="flex gap-2 lg:gap-11 w-full max-w-full">
+        <div className="flex-1 min-w-0">
+          {" "}
+          {/* Important for flex items */}
+          <CustomLine />
+        </div>
+        <div className="mb-4 flex-shrink-0">
           <h1 className="lg:tracking-wide lg:text-3xl">Why choose us</h1>
         </div>
       </section>

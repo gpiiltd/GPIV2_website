@@ -56,6 +56,16 @@ const AboutUs = () => {
               url
             }
           },
+          logo7 {
+            asset->{
+              url
+            }
+          },
+          logo8 {
+            asset->{
+              url
+            }
+          },
           StrategyText,
           StrategyText1,
           StrategyText2,
@@ -63,6 +73,8 @@ const AboutUs = () => {
           StrategyText4,
           StrategyText5,
           StrategyText6,
+          StrategyText7,
+          StrategyText8,
         }`
       )
       .then((data) => {
@@ -208,7 +220,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Software development</h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText1}
               </p>
             </div>
@@ -225,7 +237,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Business Analytics</h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText2}
               </p>
             </div>
@@ -237,7 +249,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Business Automation</h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed  lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed  lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText3}
               </p>
             </div>
@@ -253,7 +265,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Performance Management</h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText4}
               </p>
             </div>
@@ -265,8 +277,30 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Design</h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText5}
+              </p>
+            </div>
+          </section>
+          <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
+            <div>
+              <img src={aboutUsData?.logo7?.asset?.url} alt="icon" />
+            </div>
+            <div>
+              <h2 className="py-4 font-bold">Cyber Security Services</h2>
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+                {aboutUsData?.StrategyText7}
+              </p>
+            </div>
+          </section>
+          <section className="bg-white px-8 py-8 drop-shadow-xl overflow-hidden rounded-2xl hover:translate-y-125 lg:w-aboutusCardWidth lg:h-aboutCardsHeight">
+            <div>
+              <img src={aboutUsData?.logo8?.asset?.url} alt="icon" />
+            </div>
+            <div>
+              <h2 className="py-4 font-bold">I.T Infrastructure</h2>
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+                {aboutUsData?.StrategyText8}
               </p>
             </div>
           </section>
@@ -282,7 +316,7 @@ const AboutUs = () => {
             </div>
             <div>
               <h2 className="py-4 font-bold">Training </h2>
-              <p className="pt-4 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
+              <p className="pt-2 font-thin text-gray-600 text-xs tracking-wide leading-relaxed lg:font-light  lg:text-base lg:text-black">
                 {aboutUsData?.StrategyText6}
               </p>
             </div>

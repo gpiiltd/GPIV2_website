@@ -163,7 +163,7 @@ const Experience = () => {
               <img
                 src={heroData.heroSectionImageMain.asset.url}
                 alt="Hero section"
-                className="w-full h-full object-cover object-center cursor-pointer"
+                className="w-full h-full object-scale-down cursor-pointer" /* Shows entire image */
                 onError={(e) => {
                   console.error("Failed to load hero image");
                   e.target.src = bimage;
@@ -183,11 +183,11 @@ const Experience = () => {
           </div>
           <div className="bg-white rounded-tr-lg flex gap-4 justify-center items-center md:px-4 md:gap-11 md:pl-4 md:border-l-2 lg:rounded-none">
             {imageData?.images?.map((image, index) => (
-              <div key={index} className="flex items-center justify-center">
+              <div key={index} className="flex items-center justify-center p-2">
                 <img
                   src={image.asset?.url}
                   alt={image.alt}
-                  className="duration-500 pt-4 cursor-pointer w-auto h-16 object-contain"
+                  className="duration-500 cursor-pointer max-h-16 object-scale-down"
                   onError={(e) => {
                     e.target.src = "/fallback-logo.png";
                   }}
