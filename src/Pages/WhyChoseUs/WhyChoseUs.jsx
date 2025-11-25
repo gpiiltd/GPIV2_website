@@ -5,17 +5,21 @@ import { Link } from "react-scroll";
 
 import bimage from "../../Components/Assets/Group 1.png";
 
-const WhyChoseUs = () => {
+const WhyChoseUs = ({ whyChooseuseOne, whyChooseuseTwo }) => {
   return (
     <motion.div
       whileInView={{ y: [20, 0], opacity: [0, 1] }}
       transition={{ duration: 1.5 }}
       key={1}
-      className="pt-24 h-full w-full  place-items-center md:px-0 md:pt-48 md:w-layoutWidth md:m-auto"
+      className="pt-24 h-full w-full place-items-center md:px-0 md:pt-48 md:w-layoutWidth md:m-auto"
     >
-      <section className="flex gap-2 lg:gap-11 px-8">
-        <CustomLine />
-        <div className="mb-4">
+      <section className="flex gap-2 lg:gap-11 w-full max-w-full">
+        <div className="flex-1 min-w-0">
+          {" "}
+          {/* Important for flex items */}
+          <CustomLine />
+        </div>
+        <div className="mb-4 flex-shrink-0">
           <h1 className="lg:tracking-wide lg:text-3xl">Why choose us</h1>
         </div>
       </section>
@@ -45,21 +49,10 @@ const WhyChoseUs = () => {
           </div>
           <div className="pt-4 absolute  flex gap-4  justify-center items-center md:gap-8 md:justify-start  lg:pt-0 lg:gap-4 lg:pl-0">
             <div className="py-11 w-40 px-5 h-80  overflow-scroll scrollbar-hide bg-black rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center mt-24 md:h-96 md:w-64 md:overflow-visible lg:py-12 lg:ml-28">
-              <p>
-                GPI is the one stop center of solutions that enhances performance,
-                productivity, and integrity through processes founded on
-                universal truths, and professional rules for standardization and
-                sustainable wealth creation.
-              </p>
+              <p>{whyChooseuseOne ?? "loading..."}</p>
             </div>
             <div className="py-11 w-40 px-5 h-80  overflow-scroll scrollbar-hide bg-homePageCardGreen  rounded-tl-[70px] rounded-br-[70px] grid place-items-center  md:h-96 md:w-64 md:overflow-visible lg:py-12 ">
-              <p>
-                We are focused on helping businesses in automating their
-                processes exponentially in order to have a system that increases
-                business productivity and ensures data integrity as well as
-                efficient communication. In addition to automation, we manage
-                the overall productivity within your organization.
-              </p>
+              <p>{whyChooseuseOne ?? "loading..."}</p>
             </div>
           </div>
         </section>

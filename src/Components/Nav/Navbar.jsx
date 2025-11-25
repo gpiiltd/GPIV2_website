@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../Assets/GPI logo.png";
+import logo from "../Assets/gpi 3.png";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="logo"
-                className=" h-16 cursor-pointer pr-11"
+                className=" h-20 cursor-pointer pr-11"
                 onClick={homeRoute}
               ></img>
             </div>
