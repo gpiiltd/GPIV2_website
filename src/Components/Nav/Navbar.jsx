@@ -5,42 +5,81 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   let navigate = useNavigate();
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleNavigation = (path) => {
+    setNavbarOpen(false);
+    navigate(path);
+  };
 
   const routeChange = () => {
-    navigate("/aboutus");
+    handleNavigation("/aboutus");
   };
+  
   const pathChange = () => {
-    navigate("/products");
+    handleNavigation("/products");
   };
+  
   const homeRoute = () => {
-    navigate("/");
+    handleNavigation("/");
   };
 
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleGetInTouch = () => {
+    setNavbarOpen(false);
+  };
 
   return (
     <>
-      <section className="w-full relative shadow-lg flex flex-wrap items-center justify-around px-2 py-3 bg-white mb-3">
-        <div className="container px-4  flex flex-wrap items-center justify-between lg:px-0  mr-11">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <div className=" ">
+      <section className="w-full shadow-lg bg-white mb-3">
+        <div className="container mx-auto px-4 lg:px-0">
+          <div className="flex items-center justify-between py-3">
+            {/* Logo */}
+            <div className="flex-shrink-0">
               <img
                 src={logo}
                 alt="logo"
-                className=" h-20 cursor-pointer pr-11"
+                className="h-16 lg:h-20 cursor-pointer"
                 onClick={homeRoute}
-              ></img>
+              />
             </div>
 
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex">
+              <ul className="flex items-center gap-8">
+                <li className="cursor-pointer hover:text-green transition-colors" onClick={homeRoute}>
+                  Home
+                </li>
+                <li className="cursor-pointer hover:text-green transition-colors" onClick={routeChange}>
+                  About us
+                </li>
+                <li className="cursor-pointer hover:text-green transition-colors" onClick={pathChange}>
+                  Products
+                </li>
+                <li className="border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer">
+                  <Link
+                    to="contact"
+                    smooth={true}
+                    duration={700}
+                    className="cursor-pointer"
+                    onClick={handleGetInTouch}
+                  >
+                    Get in touch
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Mobile Menu Button */}
             <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+              className="lg:hidden p-2 text-black focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
+              aria-label="Toggle menu"
             >
               {navbarOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-black"
+                  className="w-6 h-6"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -53,7 +92,7 @@ const Navbar = () => {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 text-black"
+                  className="w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -68,37 +107,34 @@ const Navbar = () => {
               )}
             </button>
           </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center" +
-              (navbarOpen ? " flex pl-4" : " hidden")
-            }
-            id="example-navbar-danger"
-          >
-            <ul className="flex flex-col gap-4 lg:flex-row list-none lg:ml-auto lg:gap-8">
-              <li className="pt-4 cursor-pointer" onClick={homeRoute}>
-                Home
-              </li>
 
-              <li className="pt-4 cursor-pointer" onClick={routeChange}>
-                About us
-              </li>
-              <li className="pt-4 cursor-pointer" onClick={pathChange}>
-                Products
-              </li>
-
-              <li className="mr-2 border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer lg:mr-0">
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={700}
-                  className="cursor-pointer"
-                >
-                  Get in touch
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Mobile Navigation */}
+          {navbarOpen && (
+            <nav className="lg:hidden pb-4">
+              <ul className="flex flex-col gap-4">
+                <li className="py-2 cursor-pointer hover:text-green transition-colors" onClick={homeRoute}>
+                  Home
+                </li>
+                <li className="py-2 cursor-pointer hover:text-green transition-colors" onClick={routeChange}>
+                  About us
+                </li>
+                <li className="py-2 cursor-pointer hover:text-green transition-colors" onClick={pathChange}>
+                  Products
+                </li>
+                <li className="border-2 border-green hover:bg-green hover:text-white duration-300 py-3 px-8 rounded-full cursor-pointer text-center">
+                  <Link
+                    to="contact"
+                    smooth={true}
+                    duration={700}
+                    className="cursor-pointer"
+                    onClick={handleGetInTouch}
+                  >
+                    Get in touch
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          )}
         </div>
       </section>
     </>
