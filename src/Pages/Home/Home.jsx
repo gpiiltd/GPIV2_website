@@ -23,9 +23,9 @@ const Experience = () => {
           },
         ]
       : [];
-  }, [heroData]); // Only recalculate when heroData changes
+  }, [heroData]); 
 
-  // All useEffect hooks
+  
   useEffect(() => {
     client
       .fetch(
