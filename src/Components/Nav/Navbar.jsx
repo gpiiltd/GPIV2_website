@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../Assets/gpi 3.png";
+import logo from "../Assets/Gpi logo.jpg";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
