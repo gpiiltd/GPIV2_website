@@ -7,7 +7,7 @@ import WhoWeAre from "../WhoWeAre/WhoWeAre";
 import WhyChoseUs from "../WhyChoseUs/WhyChoseUs";
 import { motion } from "framer-motion";
 import { client } from "../../sanityClient";
-import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+import { PageLoader } from "../../Components/PageLoader";
 
 
 const HomePageContents = () => {
@@ -32,7 +32,6 @@ const HomePageContents = () => {
         }`
       )
       .then((data) => {
-        //console.log("Sanity Hero Data:", data); // Add this line
         setHomeData(data);
       })
       .catch(console.error);
