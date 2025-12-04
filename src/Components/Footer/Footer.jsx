@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import { client } from "../../sanityClient";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
+import { PageLoader } from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+
 
 const Footer = () => {
   const [footerData, setFooterData] = useState(null);
@@ -33,7 +36,7 @@ const Footer = () => {
   }, []);
 
   if (!footerData) {
-    return <div>Loading...</div>;
+    return <PageLoader />;
   }
 
   return (
@@ -41,7 +44,7 @@ const Footer = () => {
       <section className="bg-gray-100 px-11 w-full bg-white border-lightSilver flex flex-col bottom-0 gap-11">
         <div className="flex flex-col md:justify-between md:flex-row md:gap-8">
           <div className="flex flex-col font-light text-xs leading-relaxed tracking-wide text-gray-600 lg:pl-11">
-            <div className="pt-11">
+            <div className="">
               {/* Use Sanity logo instead of local logo */}
               <img
                 src={footerData.footerCTAImageMain?.asset?.url}
@@ -60,7 +63,7 @@ const Footer = () => {
           <div className="flex flex-col gap-11 text-gray-600 py-11 md:flex-row lg:pr-28 lg:gap-24">
             {/* Contact Section */}
             <div className="flex flex-col gap-2 md:flex-1 md:min-w-0">
-              <div className="text-xlg font-light">Contact</div>
+             <div className="text-lg  font-bold">Contact</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
                 <li>{footerData.number || "08055343001"}</li>
                 <li>
@@ -72,7 +75,7 @@ const Footer = () => {
 
             {/* Our Products Section */}
             <div className="flex flex-col gap-4 md:flex-1 md:min-w-0">
-              <div className="text-xlg font-light">Our Products</div>
+             <div className="text-lg  font-bold">Our Products</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
                 {footerData.listProduct?.map((product, index) => (
                   <li key={index}>{product}</li>
@@ -82,7 +85,7 @@ const Footer = () => {
 
             {/* Get Started Section */}
             <div className="flex flex-col gap-4 md:flex-1 md:min-w-0">
-              <div className="text-xlg font-light">Get Started</div>
+              <div className="text-lg  font-bold">Get Started</div>
               <ul className="font-light text-xs leading-loose tracking-wider">
                 <li className="cursor-pointer">
                   <Link
@@ -98,10 +101,37 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div>
-          <div className="border-t text-center pt-8 mb-8 text-gray-600">
+        {/* Bottom Section */}
+        <div className="mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 border-t-2">
+          <div className="text-base text-gray-600">
             <small>&copy; copyright by GPI</small>
+          </div>
+
+          <div className="flex space-x-4">
+            <a
+              href="https://www.linkedin.com/company/gpi-global-performance-index"
+              aria-label="Linkedin"
+              target="blank"
+              className="hover:text-green transition-colors duration-200 p-2"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="https://www.twitter.com/GPI_HQ"
+              aria-label="Twitter"
+              target="blank"
+              className="hover:text-green transition-colors duration-200 p-2"
+            >
+              <Twitter size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/gpi.xyz"
+              target="blank"
+              aria-label="Instagram"
+              className="hover:text-green transition-colors duration-200 p-2"
+            >
+              <Instagram size={20} />
+            </a>
           </div>
         </div>
       </section>

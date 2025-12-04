@@ -7,6 +7,8 @@ import WhoWeAre from "../WhoWeAre/WhoWeAre";
 import WhyChoseUs from "../WhyChoseUs/WhyChoseUs";
 import { motion } from "framer-motion";
 import { client } from "../../sanityClient";
+import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+
 
 const HomePageContents = () => {
   const [homeData, setHomeData] = useState(null);
@@ -37,8 +39,11 @@ const HomePageContents = () => {
   }, []);
 
   if (!homeData) {
-    return <div>Loading...</div>;
-  }
+ return (
+      <div className="flex justify-center items-center h-screen w-full">
+        <PageLoader />
+      </div>
+    );  }
   return (
     <>
       <Home />

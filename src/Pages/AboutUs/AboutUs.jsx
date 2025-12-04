@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CustomLine from "../../Components/CustomLines/CustomLine";
 import ContactUs from "../Contact/ContactUs";
 import { motion } from "framer-motion";
 import bgImage from "../../Components/Assets/Group 37340.png";
 import { client } from "../../sanityClient";
+import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+
 
 const AboutUs = () => {
   const [aboutUsData, setaboutUsData] = useState(null);
@@ -78,14 +80,16 @@ const AboutUs = () => {
         }`
       )
       .then((data) => {
-        console.log("Sanity Hero Data:", data); // Add this line
         setaboutUsData(data);
       })
       .catch(console.error);
   }, []);
   if (!aboutUsData) {
-    return <div>Loading...</div>;
-  }
+ return (
+      <div className="flex justify-center items-center h-screen w-full">
+        <PageLoader />
+      </div>
+    );  }
   return (
     <>
       <motion.div
