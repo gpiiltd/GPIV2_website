@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { motion } from "framer-motion";
 import { client } from "../../sanityClient";
-import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+import { PageLoader } from "../../Components/PageLoader";
 
 const OurProducts = () => {
   const [projectData, setProjectData] = useState(null);

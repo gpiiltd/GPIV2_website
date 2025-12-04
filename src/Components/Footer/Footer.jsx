@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import { client } from "../../sanityClient";
 import { Linkedin, Twitter, Instagram } from "lucide-react";
-import { PageLoader } from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+import { PageLoader } from "../PageLoader";
 
 
 const Footer = () => {

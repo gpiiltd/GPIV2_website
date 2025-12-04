@@ -2,7 +2,6 @@ import React from "react";
 import CustomLine from "../../Components/CustomLines/CustomLine";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { PageLoader } from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
 
 import bimage from "../../Components/Assets/Group 1.png";
 

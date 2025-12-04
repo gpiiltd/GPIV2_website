@@ -4,7 +4,7 @@ import ContactUs from "../Contact/ContactUs";
 import { motion } from "framer-motion";
 import bgImage from "../../Components/Assets/Group 37340.png";
 import { client } from "../../sanityClient";
-import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
+import { PageLoader } from "../../Components/PageLoader";
 
 
 const AboutUs = () => {
