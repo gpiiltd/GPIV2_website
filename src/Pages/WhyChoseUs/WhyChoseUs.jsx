@@ -2,6 +2,7 @@ import React from "react";
 import CustomLine from "../../Components/CustomLines/CustomLine";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { PageLoader } from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
 
 import bimage from "../../Components/Assets/Group 1.png";
 
@@ -48,6 +49,7 @@ const WhyChoseUs = ({ whyChooseuseOne, whyChooseuseTwo }) => {
             <img src={bimage} alt="..." className="w-[650px] "></img>
           </div>
           <div className="pt-4 absolute  flex gap-4  justify-center items-center md:gap-8 md:justify-start  lg:pt-0 lg:gap-4 lg:pl-0">
+
             <div className="py-11 w-40 px-5 h-auto overflow-visible bg-black rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center mt-24 md:h-96 md:w-64 lg:py-12 lg:ml-28">
               <p className="text-sm sm:text-base md:text-sm lg:text-base xl:text-base">
                 {whyChooseuseOne ?? "loading..."}

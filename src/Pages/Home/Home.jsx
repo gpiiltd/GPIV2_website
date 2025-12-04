@@ -9,7 +9,6 @@ const Experience = () => {
   const [heroData, setHeroData] = useState(null);
   const [imageData, setImageData] = useState(null);
 
-  // Use useMemo for slides to prevent unnecessary re-renders
   const slides = useMemo(() => {
     return heroData
       ? [
@@ -98,10 +97,6 @@ const Experience = () => {
     }
   }, [heroData, slides, currentInfo]); // slides is now stable
 
-  // Conditional returns at the very end
-  if (!heroData || !imageData) {
-    return <div>Loading...</div>;
-  }
   return (
     <>
       <motion.div
@@ -139,23 +134,6 @@ const Experience = () => {
               </div>
             )}
           </div>
-          {/* Right Image */}
-          {/* <div className="relative z-10 w-full aspect-[4/3] overflow-hidden">
-            <img
-              src={bimage}
-              alt="Hero section"
-              className="w-full h-full object-cover object-center"
-            />
-            <img
-              src={heroData.heroSectionImageMain?.asset?.url}
-              alt="Hero section"
-              className="w-full h-full object-cover object-center cursor-pointer"
-              onError={(e) => {
-                console.error("Failed to load hero image");
-                e.target.src = bimage; // Fallback to local image if Sanity image fails
-              }}
-            />
-          </div> */}
 
           {/* Right Image */}
           <div className="relative z-10 w-full aspect-[4/3] overflow-hidden">
@@ -163,7 +141,7 @@ const Experience = () => {
               <img
                 src={heroData.heroSectionImageMain.asset.url}
                 alt="Hero section"
-                className="w-full h-full object-scale-down cursor-pointer" /* Shows entire image */
+                className="w-full h-full object-scale-down cursor-pointer" 
                 onError={(e) => {
                   console.error("Failed to load hero image");
                   e.target.src = bimage;

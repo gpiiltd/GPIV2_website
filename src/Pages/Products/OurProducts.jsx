@@ -4,6 +4,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { motion } from "framer-motion";
 import { client } from "../../sanityClient";
+import {PageLoader} from "/Users/apple/Documents/gpi_website/GPIV2_website/src/Components/PageLoader.tsx";
 
 const OurProducts = () => {
   const [projectData, setProjectData] = useState(null);
@@ -37,7 +38,11 @@ const OurProducts = () => {
   }, []);
 
   if (!projectData) {
-    return <div>Loading...</div>;
+  return (
+      <div className="flex justify-center items-center h-screen w-full">
+        <PageLoader />
+      </div>
+    );
   }
 
   const products = projectData.projects;
