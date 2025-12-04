@@ -51,13 +51,13 @@ const WhyChoseUs = ({ whyChooseuseOne, whyChooseuseTwo }) => {
 
             <div className="py-11 w-40 px-5 h-auto overflow-visible bg-black rounded-tl-[70px] rounded-br-[70px] text-white grid place-items-center mt-24 md:h-96 md:w-64 lg:py-12 lg:ml-28">
               <p className="text-sm sm:text-base md:text-sm lg:text-base xl:text-base">
-                {whyChooseuseOne ?? "loading..."}
+                {whyChooseuseOne}
               </p>
             </div>
 
             <div className="py-11 w-40 px-5 h-auto overflow-visible bg-homePageCardGreen rounded-tl-[70px] rounded-br-[70px] grid place-items-center md:h-96 md:w-64 lg:py-12">
               <p className="text-sm sm:text-base md:text-sm lg:text-base xl:text-base">
-                {whyChooseuseTwo ?? "loading..."}
+                {whyChooseuseTwo}
               </p>
             </div>
           </div>
